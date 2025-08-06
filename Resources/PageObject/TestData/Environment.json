@@ -1,0 +1,22 @@
+{
+    "Android_Emulator": {
+        "remote_url": "http://127.0.0.1:4723",
+        "automationName": "UiAutomator2",
+        "deviceName": "emulator-5554",
+        "platformName": "Android",
+        "platformVersion": "16",
+        "appPackage": "com.tdt.pmobile3.phk.uat",
+        "appActivity": "com.tdt.pmobile3.SplashActivity"
+    },
+    "iOS_Emulator": {
+        "remote_url": "http://127.0.0.1:4723",
+        "automationName": "XCUITest",
+        "platformName": "iOS",
+        "deviceName": "iPhone 15 Pro Max",
+        "udid": "966C13C0-0DB0-4E8C-BE0E-24270641BD45",
+        "platformVersion": "17.5",
+        "app": "com.phillip.tdt.poems.phk.uat",
+        "noReset": "false",
+        "useNewWDA": "true"
+    }
+}
