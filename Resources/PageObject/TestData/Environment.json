@@ -5,8 +5,8 @@
         "deviceName": "emulator-5554",
         "platformName": "Android",
         "platformVersion": "16",
-        "appPackage": "com.tdt.pmobile3.phk.uat",
-        "appActivity": "com.tdt.pmobile3.SplashActivity"
+        "appPackage": "tdt.rpa.login.app",
+        "appActivity": "tdt.rpa.login.app.MainActivity"
     },
     "iOS_Emulator": {
         "remote_url": "http://127.0.0.1:4723",

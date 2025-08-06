@@ -1,1 +1,0 @@
-iOS_Counter_Title = "//XCUIElementTypeStaticText[@name=\"Apple\"]"

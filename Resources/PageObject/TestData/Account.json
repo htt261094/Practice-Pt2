@@ -1,19 +1,22 @@
 {
-    "HK": {
-        "Register_Account": [
-            {
-                "0000055": {
-                    "phoneNumber": "0000055",
-                    "password": "Phillip1"
-                },
-                "000003": {
-                    "phoneNumber": "000003",
-                    "password": "Phillip1"
-                }
-            }
-        ],
-        "Account_Holder": [
-            
-        ]
+    "User": {
+        "user1": {
+            "username": "user1",
+            "password": "password1",
+            "displayName": "John Doe",
+            "email": "john.doe@example.com"
+        },
+        "user2": {
+            "username": "user2",
+            "password": "password2",
+            "displayName": "Jane Smith",
+            "email": "jane.smith@example.com"
+        }
+    },
+    "Admin": {
+        "username": "admin",
+        "password": "admin123",
+        "displayName": "Adminstrator",  
+        "email": "admin@example.com"
     }
 }

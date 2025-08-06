@@ -63,21 +63,18 @@ Read iOS Config
     ...    useNewWDA=${useNewWDA}
     RETURN    ${iOS_Desired_Capabilities}
 
-Get Account Credentials
+Get User Account Credentials
     [Arguments]    ${account_name}
     File Should Exist    ${AccountList}
     ${json_text}=    Get File    ${AccountList}
     ${account_json}=    Evaluate    json.loads('''${json_text}''')    json
 
-    ${accounts}=    Get From Dictionary    ${account_json['HK']}    Register_Account
-    FOR    ${item}    IN    @{accounts}
-        ${has_key}=    Run Keyword And Return Status    Dictionary Should Contain Key    ${item}    ${account_name}
-        IF    ${has_key}
-            ${account_data}=    Get From Dictionary    ${item}    ${account_name}
-            ${phone}=    Get From Dictionary    ${account_data}    phoneNumber
-            ${password}=    Get From Dictionary    ${account_data}    password
-            RETURN    ${phone}    ${password}
-        END
-    END
-    
-    FAIL    Account '${account_name}' not found in Account List
+    ${accounts}=    Get From Dictionary    ${account_json}    User
+    ${account_data}=    Get From Dictionary    ${accounts}    ${account_name}
+
+    ${user_username}=    Get From Dictionary    ${account_data}    username
+    ${user_password}=    Get From Dictionary    ${account_data}    password
+    ${user_displayName}=    Get From Dictionary    ${account_data}    displayName
+    ${user_email}=       Get From Dictionary    ${account_data}    email
+
+    RETURN    ${user_username}    ${user_password}    ${user_displayName}    ${user_email}

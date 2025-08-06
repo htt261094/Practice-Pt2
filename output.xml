@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-06T17:19:54.093559" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="/Users/thanhht/Documents/Work/Practice-Pt2/Tests/Android/Login.robot">
+<test id="s1-t1" name="Open app and verify" line="8">
+<kw name="Open Android simulator" owner="hooks">
+<kw name="Read Android Config" owner="ReadJsonFile">
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2025-08-06T17:19:54.231725" level="INFO" html="true">File '&lt;a href="file:///Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Environment.json"&gt;/Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Environment.json&lt;/a&gt;' exists.</msg>
+<arg>${Evn}</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="PASS" start="2025-08-06T17:19:54.231592" elapsed="0.001069"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2025-08-06T17:19:54.233001" level="INFO" html="true">Getting file '&lt;a href="file:///Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Environment.json"&gt;/Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Environment.json&lt;/a&gt;'.</msg>
+<msg time="2025-08-06T17:19:54.233709" level="INFO">${json_text} = {
+    "Android_Emulator": {
+        "remote_url": "http://127.0.0.1:4723",
+        "automationName": "UiAutomator2",
+        "deviceName": "emulator-5554",
+        "platformName": "Android",
+        "...</msg>
+<var>${json_text}</var>
+<arg>${Evn}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2025-08-06T17:19:54.232833" elapsed="0.001029"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-08-06T17:19:54.234165" level="INFO">${Android_evn} = {'Android_Emulator': {'remote_url': 'http://127.0.0.1:4723', 'automationName': 'UiAutomator2', 'deviceName': 'emulator-5554', 'platformName': 'Android', 'platformVersion': '16', 'appPackage': 'tdt.rpa...</msg>
+<var>${Android_evn}</var>
+<arg>json.loads('''${json_text}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-08-06T17:19:54.233956" elapsed="0.000256"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-08-06T17:19:54.234591" level="INFO">${android} = {'remote_url': 'http://127.0.0.1:4723', 'automationName': 'UiAutomator2', 'deviceName': 'emulator-5554', 'platformName': 'Android', 'platformVersion': '16', 'appPackage': 'tdt.rpa.login.app', 'appActi...</msg>
+<var>${android}</var>
+<arg>${Android_evn}</arg>
+<arg>Android_Emulator</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-08-06T17:19:54.234433" elapsed="0.000235"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-08-06T17:19:54.234951" level="INFO">${remote_url} = http://127.0.0.1:4723</msg>
+<var>${remote_url}</var>
+<arg>${android}</arg>
+<arg>remote_url</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-08-06T17:19:54.234816" elapsed="0.000199"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-08-06T17:19:54.235202" level="INFO">${automationName} = UiAutomator2</msg>
+<var>${automationName}</var>
+<arg>${android}</arg>
+<arg>automationName</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-08-06T17:19:54.235106" elapsed="0.000133"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-08-06T17:19:54.235383" level="INFO">${deviceName} = emulator-5554</msg>
+<var>${deviceName}</var>
+<arg>${android}</arg>
+<arg>deviceName</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-08-06T17:19:54.235298" elapsed="0.000119"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-08-06T17:19:54.235561" level="INFO">${platformName} = Android</msg>
+<var>${platformName}</var>
+<arg>${android}</arg>
+<arg>platformName</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-08-06T17:19:54.235475" elapsed="0.000119"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-08-06T17:19:54.235731" level="INFO">${platformVersion} = 16</msg>
+<var>${platformVersion}</var>
+<arg>${android}</arg>
+<arg>platformVersion</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-08-06T17:19:54.235649" elapsed="0.000116"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-08-06T17:19:54.235902" level="INFO">${appPackage} = tdt.rpa.login.app</msg>
+<var>${appPackage}</var>
+<arg>${android}</arg>
+<arg>appPackage</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-08-06T17:19:54.235820" elapsed="0.000117"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-08-06T17:19:54.236071" level="INFO">${appActivity} = tdt.rpa.login.app.MainActivity</msg>
+<var>${appActivity}</var>
+<arg>${android}</arg>
+<arg>appActivity</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-08-06T17:19:54.235991" elapsed="0.000113"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-08-06T17:19:54.236442" level="INFO">${Android_Desired_Capabilities} = {'remote_url': 'http://127.0.0.1:4723', 'automationName': 'UiAutomator2', 'deviceName': 'emulator-5554', 'platformName': 'Android', 'platformVersion': '16', 'appPackage': 'tdt.rpa.login.app', 'appActi...</msg>
+<var>${Android_Desired_Capabilities}</var>
+<arg>remote_url=${remote_url}</arg>
+<arg>automationName=${automationName}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>platformVersion=${platformVersion}</arg>
+<arg>appPackage=${appPackage}</arg>
+<arg>appActivity=${appActivity}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-08-06T17:19:54.236166" elapsed="0.000316"/>
+</kw>
+<return>
+<value>${Android_Desired_Capabilities}</value>
+<status status="PASS" start="2025-08-06T17:19:54.236530" elapsed="0.000053"/>
+</return>
+<msg time="2025-08-06T17:19:54.236669" level="INFO">${Android_caps} = {'remote_url': 'http://127.0.0.1:4723', 'automationName': 'UiAutomator2', 'deviceName': 'emulator-5554', 'platformName': 'Android', 'platformVersion': '16', 'appPackage': 'tdt.rpa.login.app', 'appActi...</msg>
+<var>${Android_caps}</var>
+<doc>Reads and Return all Android Capabilities</doc>
+<status status="PASS" start="2025-08-06T17:19:54.231235" elapsed="0.005640"/>
+</kw>
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${Android_caps['remote_url']}</arg>
+<arg>automationName=${Android_caps['automationName']}</arg>
+<arg>deviceName=${Android_caps['deviceName']}</arg>
+<arg>platformName=${Android_caps['platformName']}</arg>
+<arg>platformVersion=${Android_caps['platformVersion']}</arg>
+<arg>appPackage=${Android_caps['appPackage']}</arg>
+<arg>appActivity=${Android_caps['appActivity']}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2025-08-06T17:19:54.236948" elapsed="3.908887"/>
+</kw>
+<status status="PASS" start="2025-08-06T17:19:54.231001" elapsed="3.915392"/>
+</kw>
+<kw name="Load User Credentials" owner="HomeScreen">
+<kw name="Get User Account Credentials" owner="ReadJsonFile">
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2025-08-06T17:19:58.155580" level="INFO" html="true">File '&lt;a href="file:///Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Account.json"&gt;/Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Account.json&lt;/a&gt;' exists.</msg>
+<arg>${AccountList}</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="PASS" start="2025-08-06T17:19:58.154861" elapsed="0.001050"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2025-08-06T17:19:58.156968" level="INFO" html="true">Getting file '&lt;a href="file:///Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Account.json"&gt;/Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Account.json&lt;/a&gt;'.</msg>
+<msg time="2025-08-06T17:19:58.158212" level="INFO">${json_text} = {
+    "User": {
+        "user1": {
+            "username": "user1",
+            "password": "password1",
+            "displayName": "John Doe",
+            "email": "john.doe@example.com"
+        },
+ ...</msg>
+<var>${json_text}</var>
+<arg>${AccountList}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2025-08-06T17:19:58.156269" elapsed="0.002024"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-08-06T17:19:58.158707" level="INFO">${account_json} = {'User': {'user1': {'username': 'user1', 'password': 'password1', 'displayName': 'John Doe', 'email': 'john.doe@example.com'}, 'user2': {'username': 'user2', 'password': 'password2', 'displayName': 'J...</msg>
+<var>${account_json}</var>
+<arg>json.loads('''${json_text}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-08-06T17:19:58.158438" elapsed="0.000318"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-08-06T17:19:58.158958" level="INFO">${accounts} = {'user1': {'username': 'user1', 'password': 'password1', 'displayName': 'John Doe', 'email': 'john.doe@example.com'}, 'user2': {'username': 'user2', 'password': 'password2', 'displayName': 'Jane Smith...</msg>
+<var>${accounts}</var>
+<arg>${account_json}</arg>
+<arg>User</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-08-06T17:19:58.158837" elapsed="0.000166"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-08-06T17:19:58.159176" level="INFO">${account_data} = {'username': 'user1', 'password': 'password1', 'displayName': 'John Doe', 'email': 'john.doe@example.com'}</msg>
+<var>${account_data}</var>
+<arg>${accounts}</arg>
+<arg>${account_name}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-08-06T17:19:58.159067" elapsed="0.000149"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-08-06T17:19:58.159606" level="INFO">${user_username} = user1</msg>
+<var>${user_username}</var>
+<arg>${account_data}</arg>
+<arg>username</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-08-06T17:19:58.159278" elapsed="0.000521"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-08-06T17:19:58.160877" level="INFO">${user_password} = password1</msg>
+<var>${user_password}</var>
+<arg>${account_data}</arg>
+<arg>password</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-08-06T17:19:58.160136" elapsed="0.000845"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-08-06T17:19:58.161262" level="INFO">${user_displayName} = John Doe</msg>
+<var>${user_displayName}</var>
+<arg>${account_data}</arg>
+<arg>displayName</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-08-06T17:19:58.161077" elapsed="0.000271"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-08-06T17:19:58.161539" level="INFO">${user_email} = john.doe@example.com</msg>
+<var>${user_email}</var>
+<arg>${account_data}</arg>
+<arg>email</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-08-06T17:19:58.161421" elapsed="0.000188"/>
+</kw>
+<return>
+<value>${user_username}</value>
+<value>${user_password}</value>
+<value>${user_displayName}</value>
+<value>${user_email}</value>
+<status status="PASS" start="2025-08-06T17:19:58.161668" elapsed="0.000128"/>
+</return>
+<msg time="2025-08-06T17:19:58.162020" level="INFO">${user_username} = user1</msg>
+<msg time="2025-08-06T17:19:58.162543" level="INFO">${user_password} = password1</msg>
+<msg time="2025-08-06T17:19:58.162619" level="INFO">${user_displayName} = John Doe</msg>
+<msg time="2025-08-06T17:19:58.162684" level="INFO">${user_email} = john.doe@example.com</msg>
+<var>${user_username}</var>
+<var>${user_password}</var>
+<var>${user_displayName}</var>
+<var>${user_email}</var>
+<arg>user1</arg>
+<status status="PASS" start="2025-08-06T17:19:58.148574" elapsed="0.014150"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-08-06T17:19:58.163133" level="INFO">${user_username} = user1</msg>
+<arg>${user_username}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-08-06T17:19:58.162849" elapsed="0.000360"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-08-06T17:19:58.163388" level="INFO">${user_password} = password1</msg>
+<arg>${user_password}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-08-06T17:19:58.163284" elapsed="0.000151"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-08-06T17:19:58.163596" level="INFO">${user_displayName} = John Doe</msg>
+<arg>${user_displayName}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-08-06T17:19:58.163501" elapsed="0.000137"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-08-06T17:19:58.163789" level="INFO">${user_email} = john.doe@example.com</msg>
+<arg>${user_email}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-08-06T17:19:58.163699" elapsed="0.000130"/>
+</kw>
+<status status="PASS" start="2025-08-06T17:19:58.147059" elapsed="0.016956"/>
+</kw>
+<kw name="User input user username" owner="LoginScreen">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-08-06T17:19:58.165418" level="INFO">Typing text 'user1' into text field '//androidx.compose.ui.platform.ComposeView/android.view.View/android.widget.EditText[1]'</msg>
+<msg time="2025-08-06T17:19:59.879386" level="INFO">xpath criteria: //androidx.compose.ui.platform.ComposeView/android.view.View/android.widget.EditText[1]</msg>
+<arg>${username_txtbox}</arg>
+<arg>${user_username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-08-06T17:19:58.164460" elapsed="1.715724"/>
+</kw>
+<status status="PASS" start="2025-08-06T17:19:58.164204" elapsed="1.716451"/>
+</kw>
+<kw name="User input user password" owner="LoginScreen">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-08-06T17:19:59.885692" level="INFO">Typing text 'password1' into text field '//androidx.compose.ui.platform.ComposeView/android.view.View/android.widget.EditText[2]'</msg>
+<msg time="2025-08-06T17:20:00.022010" level="INFO">xpath criteria: //androidx.compose.ui.platform.ComposeView/android.view.View/android.widget.EditText[2]</msg>
+<arg>${password_txtbox}</arg>
+<arg>${user_password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-08-06T17:19:59.882438" elapsed="0.139731"/>
+</kw>
+<status status="PASS" start="2025-08-06T17:19:59.881718" elapsed="0.140537"/>
+</kw>
+<kw name="User click login button" owner="LoginScreen">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-08-06T17:20:00.023529" level="INFO">Clicking element '//android.widget.Button'.</msg>
+<msg time="2025-08-06T17:20:00.839442" level="INFO">xpath criteria: //android.widget.Button</msg>
+<arg>${login_btn}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-08-06T17:20:00.022691" elapsed="0.817386"/>
+</kw>
+<status status="PASS" start="2025-08-06T17:20:00.022479" elapsed="0.818113"/>
+</kw>
+<kw name="User see their name on the screen" owner="HomeScreen">
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-08-06T17:20:00.844040" level="INFO">Verifying element '//android.widget.TextView[@text="John Doe"]' contains exactly text 'John Doe'.</msg>
+<msg time="2025-08-06T17:20:00.903573" level="INFO">xpath criteria: //android.widget.TextView[@text="John Doe"]</msg>
+<arg>${userName}</arg>
+<arg>${user_displayName}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-06T17:20:00.841997" elapsed="0.062274"/>
+</kw>
+<status status="PASS" start="2025-08-06T17:20:00.841242" elapsed="0.063345"/>
+</kw>
+<kw name="User see their email on the screen" owner="HomeScreen">
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-08-06T17:20:00.907809" level="INFO">Verifying element '//android.widget.TextView[@text="john.doe@example.com"]' contains exactly text 'john.doe@example.com'.</msg>
+<msg time="2025-08-06T17:20:00.946018" level="INFO">xpath criteria: //android.widget.TextView[@text="john.doe@example.com"]</msg>
+<arg>${Email}</arg>
+<arg>${user_email}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-06T17:20:00.905892" elapsed="0.040423"/>
+</kw>
+<status status="PASS" start="2025-08-06T17:20:00.905235" elapsed="0.041239"/>
+</kw>
+<status status="PASS" start="2025-08-06T17:19:54.230473" elapsed="6.716359"/>
+</test>
+<status status="PASS" start="2025-08-06T17:19:54.095486" elapsed="6.852080"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="1" fail="0" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
