@@ -31,4 +31,3 @@ User login successfully
     User click login button
     User see their name on the screen
     User see their email on the screen
-    Close All Applications

@@ -16,8 +16,8 @@ def run_tests(platform, test_suite=None, test_cases=None, tags=None):
     # Suite path
     if test_suite:
         test_path = os.path.join(base_test_path, test_suite)
-        if not os.path.isfile(test_path):
-            print(f"Error: Test suite not found -> {test_path}")
+        if not os.path.exists(test_path):
+            print(f"Error: Test suite path not found -> {test_path}")
             sys.exit(1)
     else:
         test_path = base_test_path

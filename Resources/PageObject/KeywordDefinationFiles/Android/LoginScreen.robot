@@ -18,27 +18,33 @@ Load Admin Credentials to login
     Set Suite Variable    ${admin_displayName}
     Set Suite Variable    ${admin_email}
 User input user username
+    Clear Text    ${username_txtbox}
     Input Text    ${username_txtbox}    ${user_username}
 
 User input user password
+    Clear Text    ${password_txtbox}
     Input Text    ${password_txtbox}    ${user_password}
 
 User click login button
     Click Element    ${login_btn}
 
 User input wrong username
+    Clear Text    ${username_txtbox}
     Input Text    ${username_txtbox}    user
 
 User input wrong password
+    Clear Text    ${password_txtbox}
     Input Text    ${password_txtbox}    1
 
 Error message displayed
     Element Text Should Be    ${error_message}    Invalid username or password
 
 Admin input admin username
+    Clear Text    ${username_txtbox}
     Input Text    ${username_txtbox}    ${admin_username}
 
 Admin input admin password
+    Clear Text    ${password_txtbox}
     Input Text    ${password_txtbox}    ${admin_password}
 
 Admin input wrong username

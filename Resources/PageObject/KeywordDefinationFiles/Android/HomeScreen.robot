@@ -1,8 +1,8 @@
 *** Settings ***
 Library    AppiumLibrary
-Library    ../../../../Resources/PageObject/Locators/Android/HomeScreenLocators.py
-Variables    ../../../../Resources/PageObject/Locators/Android/HomeScreenLocators.py
-Resource    ../../../../Resources/Ultis/ReadJsonFile.robot
+Library    ../../../PageObject/Locators/Android/HomeScreenLocators.py
+Variables    ../../../PageObject/Locators/Android/HomeScreenLocators.py
+Resource    ../../../Ultis/ReadJsonFile.robot
 
 *** Keywords ***
 
@@ -38,3 +38,6 @@ Admin see their email on the screen
     ${xpath}=    Get User Name Xpath    ${admin_email}
     ${actual_email}=    Get Text    ${xpath}
     Should Be Equal    ${actual_email}    ${admin_email}
+
+Tap on search button
+    Click Element    ${search_btn}
