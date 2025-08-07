@@ -5,8 +5,8 @@ A sample of robot framework when running automation testing on mobile and serve 
 ## Features
 
 - Login
-- Sort and Verify Sort
-- Open screen and Verify
+- Logout
+- Search Task and Verify
 
 ## 🛠️ Tech Stack
 
@@ -17,5 +17,6 @@ A sample of robot framework when running automation testing on mobile and serve 
 Clone the repo:
 
 ```bash
-git clone https://github.com/htt261094/Robot_Framework_Mobile
+git clone https://github.com/htt261094/Practice-RPA.git
+
 
