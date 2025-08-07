@@ -1,6 +1,7 @@
-userName = "//android.widget.TextView[@text=\"John Doe\"]"
-Email = "//android.widget.TextView[@text=\"john.doe@example.com\"]"
+def get_user_name_xpath(name):
+    return f'//android.widget.TextView[@text="{name}"]'
 
-search_btn = "//android.widget.TextView[@text=\"Search Tasks\"]"
+def get_user_email_xpath(email):
+    return f'//android.widget.TextView[@text="{email}"]'
 
 logout_btn = "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.widget.Button"

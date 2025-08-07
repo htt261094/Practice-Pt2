@@ -78,3 +78,19 @@ Get User Account Credentials
     ${user_email}=       Get From Dictionary    ${account_data}    email
 
     RETURN    ${user_username}    ${user_password}    ${user_displayName}    ${user_email}
+
+Get Admin Account Credentials
+    [Arguments]    ${account_name}
+    File Should Exist    ${AccountList}
+    ${json_text}=    Get File    ${AccountList}
+    ${account_json}=    Evaluate    json.loads('''${json_text}''')    json
+
+    ${accounts}=    Get From Dictionary    ${account_json}    Admin
+    ${account_data}=    Get From Dictionary    ${accounts}    ${account_name}
+
+    ${admin_username}=    Get From Dictionary    ${account_data}    username
+    ${admin_password}=    Get From Dictionary    ${account_data}    password
+    ${admin_displayName}=    Get From Dictionary    ${account_data}    displayName
+    ${admin_email}=       Get From Dictionary    ${account_data}    email
+
+    RETURN    ${admin_username}    ${admin_password}    ${admin_displayName}    ${admin_email}

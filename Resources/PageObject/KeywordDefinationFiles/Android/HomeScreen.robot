@@ -1,5 +1,6 @@
 *** Settings ***
 Library    AppiumLibrary
+Library    ../../../../Resources/PageObject/Locators/Android/HomeScreenLocators.py
 Variables    ../../../../Resources/PageObject/Locators/Android/HomeScreenLocators.py
 Resource    ../../../../Resources/Ultis/ReadJsonFile.robot
 
@@ -12,8 +13,28 @@ Load User Credentials
     Set Suite Variable    ${user_displayName}
     Set Suite Variable    ${user_email}
 
+Load Admin Credentials
+    ${admin_username}    ${admin_password}    ${admin_displayName}    ${admin_email}=    Get Admin Account Credentials    admin1
+    Set Suite Variable    ${admin_username}
+    Set Suite Variable    ${admin_password}
+    Set Suite Variable    ${admin_displayName}
+    Set Suite Variable    ${admin_email}
 User see their name on the screen
-    Element Text Should Be    ${userName}    ${user_displayName}
+    ${xpath}=    Get User Name Xpath    ${user_displayName}
+    ${actual_name}=    Get Text    ${xpath}
+    Should Be Equal    ${actual_name}    ${user_displayName}
 
 User see their email on the screen
-    Element Text Should Be    ${Email}    ${user_email}
+    ${xpath}=    Get User Name Xpath    ${user_email}
+    ${actual_email}=    Get Text    ${xpath}
+    Should Be Equal    ${actual_email}    ${user_email}
+
+Admin see their name on the screen
+    ${xpath}=    Get User Name Xpath    ${admin_displayName}
+    ${actual_name}=    Get Text    ${xpath}
+    Should Be Equal    ${actual_name}    ${admin_displayName}
+
+Admin see their email on the screen
+    ${xpath}=    Get User Name Xpath    ${admin_email}
+    ${actual_email}=    Get Text    ${xpath}
+    Should Be Equal    ${actual_email}    ${admin_email}

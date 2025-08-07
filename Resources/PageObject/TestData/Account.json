@@ -14,9 +14,12 @@
         }
     },
     "Admin": {
-        "username": "admin",
-        "password": "admin123",
-        "displayName": "Adminstrator",  
-        "email": "admin@example.com"
+        "admin1": {
+            "username": "admin",
+            "password": "admin123",
+            "displayName": "Administrator",  
+            "email": "admin@example.com"
+        }
+        
     }
 }
