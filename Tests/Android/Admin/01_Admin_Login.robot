@@ -31,5 +31,4 @@ Admin login successfully
     User click login button
     Admin see their name on the screen
     Admin see their email on the screen
-    Close All Applications
 

@@ -52,3 +52,6 @@ Admin input wrong username
 
 Admin input wrong password
     Input Text    ${password_txtbox}    1
+
+Login Ttitle is visible
+    Element Should Be Visible    ${login_title_screen}

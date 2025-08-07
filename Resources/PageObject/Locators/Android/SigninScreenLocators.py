@@ -3,3 +3,4 @@ password_txtbox = "//androidx.compose.ui.platform.ComposeView/android.view.View/
 login_btn = "//android.widget.Button"
 
 error_message = "//android.widget.TextView[@text=\"Invalid username or password\"]"
+login_title_screen = "//android.widget.TextView[@text=\"Login\"]"

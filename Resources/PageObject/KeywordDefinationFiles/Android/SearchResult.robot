@@ -19,3 +19,5 @@ Inputted text is display on screen
 Screen display no result found
     Get Text from Empty Table
     
+Tap Back button
+    Click Element    ${back_btn}

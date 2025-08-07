@@ -41,3 +41,6 @@ Admin see their email on the screen
 
 Tap on search button
     Click Element    ${search_btn}
+
+Tap Logout button
+    Click Element    ${logout_btn}
