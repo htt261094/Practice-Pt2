@@ -1,6 +1,6 @@
 *** Settings ***
 Library    AppiumLibrary
-Variables    ../../../PageObject/Locators/Android/SearchResultScreen.py
+Variables    ../../../PageObject/Locators/Android/SearchResultScreenLocators.py
 Resource    ../../../Ultis/GetTextFromElements.robot
 
 *** Variables ***

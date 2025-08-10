@@ -12,10 +12,10 @@
         "remote_url": "http://127.0.0.1:4723",
         "automationName": "XCUITest",
         "platformName": "iOS",
-        "deviceName": "iPhone 15 Pro Max",
-        "udid": "966C13C0-0DB0-4E8C-BE0E-24270641BD45",
+        "deviceName": "iPhone 16 pro",
+        "udid": "E591EB98-D300-4723-95E5-745ED17EDEAD",
         "platformVersion": "17.5",
-        "app": "com.phillip.tdt.poems.phk.uat",
+        "app": "rpa.ios.ex.app.RPAExampleApp",
         "noReset": "false",
         "useNewWDA": "true"
     }
