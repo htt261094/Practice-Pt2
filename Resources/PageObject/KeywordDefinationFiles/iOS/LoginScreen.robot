@@ -52,3 +52,10 @@ User see error message about password
 
 User click OK button
     Click Element    ${errorMess_ok_btn}
+
+Clear inputted text
+    Clear Text    //XCUIElementTypeTextField
+    Clear Text    //XCUIElementTypeSecureTextField
+
+Login screen is visible
+    Element Text Should Be    ${login_title}    Login

@@ -28,3 +28,9 @@ Admin see welcoming text
     ${xpath}=    Get Welcome Text Path    ${admin_displayName}
     ${actual_username}=    Get Text    ${xpath}
     Element Should Contain Text    ${actual_username}    ${admin_displayName}
+
+Admin tap on filter button
+    Click Element    ${filter_btn}
+
+Admin tap on logout button
+    Click Element    ${logout_btn}

@@ -5,7 +5,7 @@ clear_filter_btn = "accessibility_id=Clear All Filters"
 hide_filter_btn = "//XCUIElementTypeStaticText[@name=\"Hide Filters\"]"
 
 #category
-cat_all_option = "accessdibility_id=All"
+cat_all_option = "accessibility_id=All"
 cat_cusService_option = "accessibility_id=Customer Service"
 cat_dataEntry_option = "//XCUIElementTypeButton[@name=\"Data Entry\"]"
 cat_docProcess_option = "//XCUIElementTypeButton[@name=\"Document Processing\"]"

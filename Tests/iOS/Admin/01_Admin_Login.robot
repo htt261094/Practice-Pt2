@@ -14,8 +14,7 @@ User login unsuccessful with wrong username
     User click login button
     User see error message about username
     User click OK button
-    Clear Text    //XCUIElementTypeTextField
-    Clear Text    //XCUIElementTypeSecureTextField
+    Clear inputted text
 
 User login unsuccessful with wrong password
     Admin input username
@@ -23,8 +22,7 @@ User login unsuccessful with wrong password
     User click login button
     User see error message about password
     User click OK button
-    Clear Text    //XCUIElementTypeTextField
-    Clear Text    //XCUIElementTypeSecureTextField
+    Clear inputted text
 
 User login unsuccessful with wrong username and password
     Admin input wrong username
@@ -32,9 +30,8 @@ User login unsuccessful with wrong username and password
     User click login button
     User see error message about username
     User click OK button
-    Clear Text    //XCUIElementTypeTextField
-    Clear Text    //XCUIElementTypeSecureTextField
-
+    Clear inputted text
+    
 User login successfully with correct username and password
     Admin input username
     Admin input password
