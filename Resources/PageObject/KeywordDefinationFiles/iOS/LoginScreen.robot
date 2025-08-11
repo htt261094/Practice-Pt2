@@ -32,6 +32,12 @@ User input wrong password
 Admin input username
     Input Text    ${username_txtbox}    ${admin_username}
 
+Admin input wrong username
+    Input Text    ${username_txtbox}    adminTestAccount
+
+Admin input wrong password
+    Input Text    ${password_txtbox}    1
+
 Admin input password
     Input Text    ${password_txtbox}    ${admin_password}
 

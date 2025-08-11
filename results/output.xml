@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-10T17:09:43.434097" rpa="false" schemaversion="5">
-<suite id="s1" name="Ios" source="/Users/thanhht/Documents/Work/Practice-Pt2/Tests/Ios">
-<suite id="s1-s1" name="User" source="/Users/thanhht/Documents/Work/Practice-Pt2/Tests/Ios/User">
-<suite id="s1-s1-s1" name="01 User Login" source="/Users/thanhht/Documents/Work/Practice-Pt2/Tests/Ios/User/01_User_Login.robot">
-<test id="s1-s1-s1-t1" name="User login unsuccessful with wrong username" line="9">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-10T20:34:50.287260" rpa="false" schemaversion="5">
+<suite id="s1" name="Admin" source="/Users/thanhht/Documents/Work/Practice-Pt2/Tests/Ios/Admin">
+<suite id="s1-s1" name="01 Admin Login" source="/Users/thanhht/Documents/Work/Practice-Pt2/Tests/Ios/Admin/01_Admin_Login.robot">
+<test id="s1-s1-t1" name="User login unsuccessful with wrong username" line="9">
 <kw name="Open iOS simulator" owner="hooks">
 <kw name="Read iOS Config" owner="ReadJsonFile">
 <kw name="File Should Exist" owner="OperatingSystem">
-<msg time="2025-08-10T17:09:43.522361" level="INFO" html="true">File '&lt;a href="file:///Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Environment.json"&gt;/Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Environment.json&lt;/a&gt;' exists.</msg>
+<msg time="2025-08-10T20:34:50.372902" level="INFO" html="true">File '&lt;a href="file:///Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Environment.json"&gt;/Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Environment.json&lt;/a&gt;' exists.</msg>
 <arg>${Evn}</arg>
 <doc>Fails unless the given ``path`` points to an existing file.</doc>
-<status status="PASS" start="2025-08-10T17:09:43.522278" elapsed="0.000116"/>
+<status status="PASS" start="2025-08-10T20:34:50.372822" elapsed="0.000111"/>
 </kw>
 <kw name="Get File" owner="OperatingSystem">
-<msg time="2025-08-10T17:09:43.522505" level="INFO" html="true">Getting file '&lt;a href="file:///Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Environment.json"&gt;/Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Environment.json&lt;/a&gt;'.</msg>
-<msg time="2025-08-10T17:09:43.522574" level="INFO">${json_text} = {
+<msg time="2025-08-10T20:34:50.373044" level="INFO" html="true">Getting file '&lt;a href="file:///Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Environment.json"&gt;/Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Environment.json&lt;/a&gt;'.</msg>
+<msg time="2025-08-10T20:34:50.373110" level="INFO">${json_text} = {
     "Android_Emulator": {
         "remote_url": "http://127.0.0.1:4723",
         "automationName": "UiAutomator2",
@@ -24,98 +23,98 @@
 <var>${json_text}</var>
 <arg>${Evn}</arg>
 <doc>Returns the contents of a specified file.</doc>
-<status status="PASS" start="2025-08-10T17:09:43.522447" elapsed="0.000137"/>
+<status status="PASS" start="2025-08-10T20:34:50.372986" elapsed="0.000135"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-08-10T17:09:43.522743" level="INFO">${iOS_evn} = {'Android_Emulator': {'remote_url': 'http://127.0.0.1:4723', 'automationName': 'UiAutomator2', 'deviceName': 'emulator-5554', 'platformName': 'Android', 'platformVersion': '16', 'appPackage': 'tdt.rpa...</msg>
+<msg time="2025-08-10T20:34:50.373277" level="INFO">${iOS_evn} = {'Android_Emulator': {'remote_url': 'http://127.0.0.1:4723', 'automationName': 'UiAutomator2', 'deviceName': 'emulator-5554', 'platformName': 'Android', 'platformVersion': '16', 'appPackage': 'tdt.rpa...</msg>
 <var>${iOS_evn}</var>
 <arg>json.loads('''${json_text}''')</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-08-10T17:09:43.522628" elapsed="0.000125"/>
+<status status="PASS" start="2025-08-10T20:34:50.373165" elapsed="0.000122"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-10T17:09:43.522846" level="INFO">${iOS} = {'remote_url': 'http://127.0.0.1:4723', 'automationName': 'XCUITest', 'platformName': 'iOS', 'deviceName': 'iPhone 16 pro', 'udid': 'E591EB98-D300-4723-95E5-745ED17EDEAD', 'platformVersion': '17.5', '...</msg>
+<msg time="2025-08-10T20:34:50.373379" level="INFO">${iOS} = {'remote_url': 'http://127.0.0.1:4723', 'automationName': 'XCUITest', 'platformName': 'iOS', 'deviceName': 'iPhone 16 pro', 'udid': 'E591EB98-D300-4723-95E5-745ED17EDEAD', 'platformVersion': '17.5', '...</msg>
 <var>${iOS}</var>
 <arg>${iOS_evn}</arg>
 <arg>iOS_Emulator</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-10T17:09:43.522792" elapsed="0.000063"/>
+<status status="PASS" start="2025-08-10T20:34:50.373325" elapsed="0.000064"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-10T17:09:43.522936" level="INFO">${remote_url} = http://127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:34:50.373472" level="INFO">${remote_url} = http://127.0.0.1:4723</msg>
 <var>${remote_url}</var>
 <arg>${iOS}</arg>
 <arg>remote_url</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-10T17:09:43.522890" elapsed="0.000053"/>
+<status status="PASS" start="2025-08-10T20:34:50.373425" elapsed="0.000054"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-10T17:09:43.523024" level="INFO">${automationName} = XCUITest</msg>
+<msg time="2025-08-10T20:34:50.373560" level="INFO">${automationName} = XCUITest</msg>
 <var>${automationName}</var>
 <arg>${iOS}</arg>
 <arg>automationName</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-10T17:09:43.522976" elapsed="0.000059"/>
+<status status="PASS" start="2025-08-10T20:34:50.373514" elapsed="0.000054"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-10T17:09:43.523110" level="INFO">${deviceName} = iPhone 16 pro</msg>
+<msg time="2025-08-10T20:34:50.373648" level="INFO">${deviceName} = iPhone 16 pro</msg>
 <var>${deviceName}</var>
 <arg>${iOS}</arg>
 <arg>deviceName</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-10T17:09:43.523067" elapsed="0.000051"/>
+<status status="PASS" start="2025-08-10T20:34:50.373601" elapsed="0.000053"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-10T17:09:43.523196" level="INFO">${platformName} = iOS</msg>
+<msg time="2025-08-10T20:34:50.373730" level="INFO">${platformName} = iOS</msg>
 <var>${platformName}</var>
 <arg>${iOS}</arg>
 <arg>platformName</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-10T17:09:43.523150" elapsed="0.000053"/>
+<status status="PASS" start="2025-08-10T20:34:50.373686" elapsed="0.000050"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-10T17:09:43.523281" level="INFO">${platformVersion} = 17.5</msg>
+<msg time="2025-08-10T20:34:50.373816" level="INFO">${platformVersion} = 17.5</msg>
 <var>${platformVersion}</var>
 <arg>${iOS}</arg>
 <arg>platformVersion</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-10T17:09:43.523236" elapsed="0.000052"/>
+<status status="PASS" start="2025-08-10T20:34:50.373769" elapsed="0.000054"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-10T17:09:43.523363" level="INFO">${app} = rpa.ios.ex.app.RPAExampleApp</msg>
+<msg time="2025-08-10T20:34:50.373897" level="INFO">${app} = rpa.ios.ex.app.RPAExampleApp</msg>
 <var>${app}</var>
 <arg>${iOS}</arg>
 <arg>app</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-10T17:09:43.523320" elapsed="0.000051"/>
+<status status="PASS" start="2025-08-10T20:34:50.373855" elapsed="0.000048"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-10T17:09:43.523447" level="INFO">${udid} = E591EB98-D300-4723-95E5-745ED17EDEAD</msg>
+<msg time="2025-08-10T20:34:50.373981" level="INFO">${udid} = E591EB98-D300-4723-95E5-745ED17EDEAD</msg>
 <var>${udid}</var>
 <arg>${iOS}</arg>
 <arg>udid</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-10T17:09:43.523404" elapsed="0.000050"/>
+<status status="PASS" start="2025-08-10T20:34:50.373936" elapsed="0.000052"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-10T17:09:43.523529" level="INFO">${noReset} = false</msg>
+<msg time="2025-08-10T20:34:50.374066" level="INFO">${noReset} = false</msg>
 <var>${noReset}</var>
 <arg>${iOS}</arg>
 <arg>noReset</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-10T17:09:43.523486" elapsed="0.000051"/>
+<status status="PASS" start="2025-08-10T20:34:50.374020" elapsed="0.000053"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-10T17:09:43.523616" level="INFO">${useNewWDA} = true</msg>
+<msg time="2025-08-10T20:34:50.374151" level="INFO">${useNewWDA} = true</msg>
 <var>${useNewWDA}</var>
 <arg>${iOS}</arg>
 <arg>useNewWDA</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-10T17:09:43.523570" elapsed="0.000056"/>
+<status status="PASS" start="2025-08-10T20:34:50.374105" elapsed="0.000053"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-08-10T17:09:43.523946" level="INFO">${iOS_Desired_Capabilities} = {'remote_url': 'http://127.0.0.1:4723', 'automationName': 'XCUITest', 'deviceName': 'iPhone 16 pro', 'platformName': 'iOS', 'platformVersion': '17.5', 'app': 'rpa.ios.ex.app.RPAExampleApp', 'udid': 'E...</msg>
+<msg time="2025-08-10T20:34:50.374419" level="INFO">${iOS_Desired_Capabilities} = {'remote_url': 'http://127.0.0.1:4723', 'automationName': 'XCUITest', 'deviceName': 'iPhone 16 pro', 'platformName': 'iOS', 'platformVersion': '17.5', 'app': 'rpa.ios.ex.app.RPAExampleApp', 'udid': 'E...</msg>
 <var>${iOS_Desired_Capabilities}</var>
 <arg>remote_url=${remote_url}</arg>
 <arg>automationName=${automationName}</arg>
@@ -127,30 +126,30 @@
 <arg>noReset=${noReset}</arg>
 <arg>useNewWDA=${useNewWDA}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-08-10T17:09:43.523671" elapsed="0.000291"/>
+<status status="PASS" start="2025-08-10T20:34:50.374195" elapsed="0.000233"/>
 </kw>
 <return>
 <value>${iOS_Desired_Capabilities}</value>
-<status status="PASS" start="2025-08-10T17:09:43.524005" elapsed="0.000025"/>
+<status status="PASS" start="2025-08-10T20:34:50.374453" elapsed="0.000025"/>
 </return>
-<msg time="2025-08-10T17:09:43.524092" level="INFO">${iOS_caps} = {'remote_url': 'http://127.0.0.1:4723', 'automationName': 'XCUITest', 'deviceName': 'iPhone 16 pro', 'platformName': 'iOS', 'platformVersion': '17.5', 'app': 'rpa.ios.ex.app.RPAExampleApp', 'udid': 'E...</msg>
+<msg time="2025-08-10T20:34:50.374537" level="INFO">${iOS_caps} = {'remote_url': 'http://127.0.0.1:4723', 'automationName': 'XCUITest', 'deviceName': 'iPhone 16 pro', 'platformName': 'iOS', 'platformVersion': '17.5', 'app': 'rpa.ios.ex.app.RPAExampleApp', 'udid': 'E...</msg>
 <var>${iOS_caps}</var>
 <doc>Reads and return all iOS Capabilities</doc>
-<status status="PASS" start="2025-08-10T17:09:43.521986" elapsed="0.002117"/>
+<status status="PASS" start="2025-08-10T20:34:50.372531" elapsed="0.002017"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-08-10T17:09:43.524208" level="INFO">{'remote_url': 'http://127.0.0.1:4723', 'automationName': 'XCUITest', 'deviceName': 'iPhone 16 pro', 'platformName': 'iOS', 'platformVersion': '17.5', 'app': 'rpa.ios.ex.app.RPAExampleApp', 'udid': 'E591EB98-D300-4723-95E5-745ED17EDEAD', 'noReset': 'false', 'useNewWDA': 'true'}</msg>
+<msg time="2025-08-10T20:34:50.374646" level="INFO">{'remote_url': 'http://127.0.0.1:4723', 'automationName': 'XCUITest', 'deviceName': 'iPhone 16 pro', 'platformName': 'iOS', 'platformVersion': '17.5', 'app': 'rpa.ios.ex.app.RPAExampleApp', 'udid': 'E591EB98-D300-4723-95E5-745ED17EDEAD', 'noReset': 'false', 'useNewWDA': 'true'}</msg>
 <arg>${iOS_caps}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-10T17:09:43.524153" elapsed="0.000159"/>
+<status status="PASS" start="2025-08-10T20:34:50.374596" elapsed="0.000068"/>
 </kw>
 <kw name="Open Application" owner="AppiumLibrary">
-<msg time="2025-08-10T17:09:43.525703" level="DEBUG">POST http://127.0.0.1:4723/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'appium:automationName': 'XCUITest', 'appium:deviceName': 'iPhone 16 pro', 'platformName': 'iOS', 'appium:platformVersion': '17.5', 'appium:app': 'rpa.ios.ex.app.RPAExampleApp', 'appium:udid': 'E591EB98-D300-4723-95E5-745ED17EDEAD', 'appium:noReset': 'false', 'appium:useNewWDA': 'true'}}}</msg>
-<msg time="2025-08-10T17:09:43.525886" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:50.505279" level="DEBUG">http://127.0.0.1:4723 "POST /session HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:50.505682" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"webStorageEnabled":false,"locationContextEnabled":false,"browserName":"","platform":"MAC","javascriptEnabled":true,"databaseEnabled":false,"takesScreenshot":true,"networkConnectionEnabled":false,"platformName":"iOS","automationName":"XCUITest","deviceName":"iPhone 16 pro","platformVersion":"17.5","app":"rpa.ios.ex.app.RPAExampleApp","udid":"E591EB98-D300-4723-95E5-745ED17EDEAD","noReset":false,"useNewWDA":true},"sessionId":"3919c017-4539-4b3e-b693-ffee891ea5b4"}} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '494', 'ETag': 'W/"1ee-i7CNdSstF9HJu8QjxFMQVHgKVLw"', 'Date': 'Sun, 10 Aug 2025 10:09:50 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:50.505901" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:50.508341" level="DEBUG">Opened application with session id 3919c017-4539-4b3e-b693-ffee891ea5b4</msg>
+<msg time="2025-08-10T20:34:50.376209" level="DEBUG">POST http://127.0.0.1:4723/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'appium:automationName': 'XCUITest', 'appium:deviceName': 'iPhone 16 pro', 'platformName': 'iOS', 'appium:platformVersion': '17.5', 'appium:app': 'rpa.ios.ex.app.RPAExampleApp', 'appium:udid': 'E591EB98-D300-4723-95E5-745ED17EDEAD', 'appium:noReset': 'false', 'appium:useNewWDA': 'true'}}}</msg>
+<msg time="2025-08-10T20:34:50.376388" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:34:57.369450" level="DEBUG">http://127.0.0.1:4723 "POST /session HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:34:57.369995" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"webStorageEnabled":false,"locationContextEnabled":false,"browserName":"","platform":"MAC","javascriptEnabled":true,"databaseEnabled":false,"takesScreenshot":true,"networkConnectionEnabled":false,"platformName":"iOS","automationName":"XCUITest","deviceName":"iPhone 16 pro","platformVersion":"17.5","app":"rpa.ios.ex.app.RPAExampleApp","udid":"E591EB98-D300-4723-95E5-745ED17EDEAD","noReset":false,"useNewWDA":true},"sessionId":"3b4c29b1-e903-4683-8f5f-629ddcc17bb0"}} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '494', 'ETag': 'W/"1ee-aR6w1IpHoBmX7H0gD0dsXSUSzKU"', 'Date': 'Sun, 10 Aug 2025 13:34:57 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:34:57.370217" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:34:57.373391" level="DEBUG">Opened application with session id 3b4c29b1-e903-4683-8f5f-629ddcc17bb0</msg>
 <arg>remote_url=${iOS_caps['remote_url']}</arg>
 <arg>automationName=${iOS_caps['automationName']}</arg>
 <arg>deviceName=${iOS_caps['deviceName']}</arg>
@@ -166,21 +165,21 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | No     | alias             |</doc>
-<status status="PASS" start="2025-08-10T17:09:43.524357" elapsed="6.984097"/>
+<status status="PASS" start="2025-08-10T20:34:50.374811" elapsed="6.998708"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:09:43.521723" elapsed="6.986889"/>
+<status status="PASS" start="2025-08-10T20:34:50.372384" elapsed="7.001293"/>
 </kw>
-<kw name="Load User Credentials to login" owner="LoginScreen">
-<kw name="Get User Account Credentials" owner="ReadJsonFile">
+<kw name="Load Admin Credentials to login" owner="LoginScreen">
+<kw name="Get Admin Account Credentials" owner="ReadJsonFile">
 <kw name="File Should Exist" owner="OperatingSystem">
-<msg time="2025-08-10T17:09:50.510020" level="INFO" html="true">File '&lt;a href="file:///Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Account.json"&gt;/Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Account.json&lt;/a&gt;' exists.</msg>
+<msg time="2025-08-10T20:34:57.375747" level="INFO" html="true">File '&lt;a href="file:///Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Account.json"&gt;/Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Account.json&lt;/a&gt;' exists.</msg>
 <arg>${AccountList}</arg>
 <doc>Fails unless the given ``path`` points to an existing file.</doc>
-<status status="PASS" start="2025-08-10T17:09:50.509695" elapsed="0.000399"/>
+<status status="PASS" start="2025-08-10T20:34:57.375308" elapsed="0.000552"/>
 </kw>
 <kw name="Get File" owner="OperatingSystem">
-<msg time="2025-08-10T17:09:50.510435" level="INFO" html="true">Getting file '&lt;a href="file:///Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Account.json"&gt;/Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Account.json&lt;/a&gt;'.</msg>
-<msg time="2025-08-10T17:09:50.510670" level="INFO">${json_text} = {
+<msg time="2025-08-10T20:34:57.376290" level="INFO" html="true">Getting file '&lt;a href="file:///Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Account.json"&gt;/Users/thanhht/Documents/Work/Practice-Pt2/Resources/PageObject/TestData/Account.json&lt;/a&gt;'.</msg>
+<msg time="2025-08-10T20:34:57.376555" level="INFO">${json_text} = {
     "User": {
         "user1": {
             "username": "user1",
@@ -192,642 +191,640 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 <var>${json_text}</var>
 <arg>${AccountList}</arg>
 <doc>Returns the contents of a specified file.</doc>
-<status status="PASS" start="2025-08-10T17:09:50.510234" elapsed="0.000468"/>
+<status status="PASS" start="2025-08-10T20:34:57.376052" elapsed="0.000533"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-08-10T17:09:50.511211" level="INFO">${account_json} = {'User': {'user1': {'username': 'user1', 'password': 'password1', 'displayName': 'John Doe', 'email': 'john.doe@example.com'}, 'user2': {'username': 'user2', 'password': 'password2', 'displayName': 'J...</msg>
+<msg time="2025-08-10T20:34:57.377165" level="INFO">${account_json} = {'User': {'user1': {'username': 'user1', 'password': 'password1', 'displayName': 'John Doe', 'email': 'john.doe@example.com'}, 'user2': {'username': 'user2', 'password': 'password2', 'displayName': 'J...</msg>
 <var>${account_json}</var>
 <arg>json.loads('''${json_text}''')</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-08-10T17:09:50.510839" elapsed="0.000404"/>
+<status status="PASS" start="2025-08-10T20:34:57.376718" elapsed="0.000477"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-10T17:09:50.511568" level="INFO">${accounts} = {'user1': {'username': 'user1', 'password': 'password1', 'displayName': 'John Doe', 'email': 'john.doe@example.com'}, 'user2': {'username': 'user2', 'password': 'password2', 'displayName': 'Jane Smith...</msg>
+<msg time="2025-08-10T20:34:57.377489" level="INFO">${accounts} = {'admin1': {'username': 'admin', 'password': 'admin123', 'displayName': 'Administrator', 'email': 'admin@example.com'}}</msg>
 <var>${accounts}</var>
 <arg>${account_json}</arg>
-<arg>User</arg>
+<arg>Admin</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-10T17:09:50.511378" elapsed="0.000221"/>
+<status status="PASS" start="2025-08-10T20:34:57.377320" elapsed="0.000194"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-10T17:09:50.511934" level="INFO">${account_data} = {'username': 'user1', 'password': 'password1', 'displayName': 'John Doe', 'email': 'john.doe@example.com'}</msg>
+<msg time="2025-08-10T20:34:57.377785" level="INFO">${account_data} = {'username': 'admin', 'password': 'admin123', 'displayName': 'Administrator', 'email': 'admin@example.com'}</msg>
 <var>${account_data}</var>
 <arg>${accounts}</arg>
 <arg>${account_name}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-10T17:09:50.511727" elapsed="0.000237"/>
+<status status="PASS" start="2025-08-10T20:34:57.377619" elapsed="0.000190"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-10T17:09:50.512261" level="INFO">${user_username} = user1</msg>
-<var>${user_username}</var>
+<msg time="2025-08-10T20:34:57.378051" level="INFO">${admin_username} = admin</msg>
+<var>${admin_username}</var>
 <arg>${account_data}</arg>
 <arg>username</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-10T17:09:50.512090" elapsed="0.000199"/>
+<status status="PASS" start="2025-08-10T20:34:57.377918" elapsed="0.000157"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-10T17:09:50.512575" level="INFO">${user_password} = password1</msg>
-<var>${user_password}</var>
+<msg time="2025-08-10T20:34:57.378313" level="INFO">${admin_password} = admin123</msg>
+<var>${admin_password}</var>
 <arg>${account_data}</arg>
 <arg>password</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-10T17:09:50.512410" elapsed="0.000192"/>
+<status status="PASS" start="2025-08-10T20:34:57.378174" elapsed="0.000160"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-10T17:09:50.512881" level="INFO">${user_displayName} = John Doe</msg>
-<var>${user_displayName}</var>
+<msg time="2025-08-10T20:34:57.378561" level="INFO">${admin_displayName} = Administrator</msg>
+<var>${admin_displayName}</var>
 <arg>${account_data}</arg>
 <arg>displayName</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-10T17:09:50.512719" elapsed="0.000190"/>
+<status status="PASS" start="2025-08-10T20:34:57.378429" elapsed="0.000154"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-10T17:09:50.513198" level="INFO">${user_email} = john.doe@example.com</msg>
-<var>${user_email}</var>
+<msg time="2025-08-10T20:34:57.378821" level="INFO">${admin_email} = admin@example.com</msg>
+<var>${admin_email}</var>
 <arg>${account_data}</arg>
 <arg>email</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-10T17:09:50.513025" elapsed="0.000200"/>
+<status status="PASS" start="2025-08-10T20:34:57.378679" elapsed="0.000163"/>
 </kw>
 <return>
-<value>${user_username}</value>
-<value>${user_password}</value>
-<value>${user_displayName}</value>
-<value>${user_email}</value>
-<status status="PASS" start="2025-08-10T17:09:50.513286" elapsed="0.000058"/>
+<value>${admin_username}</value>
+<value>${admin_password}</value>
+<value>${admin_displayName}</value>
+<value>${admin_email}</value>
+<status status="PASS" start="2025-08-10T20:34:57.378896" elapsed="0.000066"/>
 </return>
-<msg time="2025-08-10T17:09:50.513627" level="INFO">${user_username} = user1</msg>
-<msg time="2025-08-10T17:09:50.513675" level="INFO">${user_password} = password1</msg>
-<msg time="2025-08-10T17:09:50.513722" level="INFO">${user_displayName} = John Doe</msg>
-<msg time="2025-08-10T17:09:50.513765" level="INFO">${user_email} = john.doe@example.com</msg>
-<var>${user_username}</var>
-<var>${user_password}</var>
-<var>${user_displayName}</var>
-<var>${user_email}</var>
-<arg>user1</arg>
-<status status="PASS" start="2025-08-10T17:09:50.509382" elapsed="0.004408"/>
+<msg time="2025-08-10T20:34:57.379208" level="INFO">${admin_username} = admin</msg>
+<msg time="2025-08-10T20:34:57.379245" level="INFO">${admin_password} = admin123</msg>
+<msg time="2025-08-10T20:34:57.379280" level="INFO">${admin_displayName} = Administrator</msg>
+<msg time="2025-08-10T20:34:57.379312" level="INFO">${admin_email} = admin@example.com</msg>
+<var>${admin_username}</var>
+<var>${admin_password}</var>
+<var>${admin_displayName}</var>
+<var>${admin_email}</var>
+<arg>admin1</arg>
+<status status="PASS" start="2025-08-10T20:34:57.374683" elapsed="0.004647"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-08-10T17:09:50.514297" level="INFO">${user_username} = user1</msg>
-<arg>${user_username}</arg>
+<msg time="2025-08-10T20:34:57.379776" level="INFO">${admin_username} = admin</msg>
+<arg>${admin_username}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-08-10T17:09:50.514072" elapsed="0.000270"/>
+<status status="PASS" start="2025-08-10T20:34:57.379479" elapsed="0.000338"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-08-10T17:09:50.514724" level="INFO">${user_password} = password1</msg>
-<arg>${user_password}</arg>
+<msg time="2025-08-10T20:34:57.380091" level="INFO">${admin_password} = admin123</msg>
+<arg>${admin_password}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-08-10T17:09:50.514457" elapsed="0.000349"/>
+<status status="PASS" start="2025-08-10T20:34:57.379930" elapsed="0.000195"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-08-10T17:09:50.515240" level="INFO">${user_displayName} = John Doe</msg>
-<arg>${user_displayName}</arg>
+<msg time="2025-08-10T20:34:57.380393" level="INFO">${admin_displayName} = Administrator</msg>
+<arg>${admin_displayName}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-08-10T17:09:50.515018" elapsed="0.000266"/>
+<status status="PASS" start="2025-08-10T20:34:57.380228" elapsed="0.000201"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-08-10T17:09:50.515633" level="INFO">${user_email} = john.doe@example.com</msg>
-<arg>${user_email}</arg>
+<msg time="2025-08-10T20:34:57.380801" level="INFO">${admin_email} = admin@example.com</msg>
+<arg>${admin_email}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-08-10T17:09:50.515435" elapsed="0.000245"/>
+<status status="PASS" start="2025-08-10T20:34:57.380530" elapsed="0.000355"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:09:50.508944" elapsed="0.006800"/>
+<status status="PASS" start="2025-08-10T20:34:57.374055" elapsed="0.006918"/>
 </kw>
-<kw name="User input wrong username" owner="LoginScreen">
+<kw name="Admin input wrong username" owner="LoginScreen">
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-10T17:09:50.517797" level="INFO">Typing text 'testaccount' into text field '//XCUIElementTypeTextField[@value="Username"]'</msg>
-<msg time="2025-08-10T17:09:50.517983" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeTextField[@value="Username"]'}</msg>
-<msg time="2025-08-10T17:09:50.518572" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:50.607915" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:50.608098" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0B000000-0000-0000-3F81-010000000000","ELEMENT":"0B000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-o4ukwtOdcFGCGFxA18bQTarV1bU"', 'Date': 'Sun, 10 Aug 2025 10:09:50 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:50.608198" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:50.608462" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0B000000-0000-0000-3F81-010000000000/value {'text': 'testaccount', 'value': ['t', 'e', 's', 't', 'a', 'c', 'c', 'o', 'u', 'n', 't']}</msg>
-<msg time="2025-08-10T17:09:50.608836" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:51.866299" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0B000000-0000-0000-3F81-010000000000/value HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:51.866623" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 10:09:51 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:51.866742" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:51.866977" level="INFO">xpath criteria: //XCUIElementTypeTextField[@value="Username"]</msg>
+<msg time="2025-08-10T20:34:57.382965" level="INFO">Typing text 'adminTestAccount' into text field '//XCUIElementTypeTextField[@value="Username"]'</msg>
+<msg time="2025-08-10T20:34:57.383162" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeTextField[@value="Username"]'}</msg>
+<msg time="2025-08-10T20:34:57.383605" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:34:57.467284" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:34:57.467484" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0B000000-0000-0000-D326-000000000000","ELEMENT":"0B000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-1z9g1wV+UXk6hPt3CmLh9+2nITM"', 'Date': 'Sun, 10 Aug 2025 13:34:57 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:34:57.467587" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:34:57.467889" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0B000000-0000-0000-D326-000000000000/value {'text': 'adminTestAccount', 'value': ['a', 'd', 'm', 'i', 'n', 'T', 'e', 's', 't', 'A', 'c', 'c', 'o', 'u', 'n', 't']}</msg>
+<msg time="2025-08-10T20:34:57.468346" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:34:58.828481" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0B000000-0000-0000-D326-000000000000/value HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:34:58.828788" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 13:34:58 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:34:58.828885" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:34:58.829143" level="INFO">xpath criteria: //XCUIElementTypeTextField[@value="Username"]</msg>
 <arg>${username_txtbox}</arg>
-<arg>testaccount</arg>
+<arg>adminTestAccount</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:09:50.516269" elapsed="1.350814"/>
+<status status="PASS" start="2025-08-10T20:34:57.381491" elapsed="1.447730"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:09:50.515972" elapsed="1.351348"/>
+<status status="PASS" start="2025-08-10T20:34:57.381202" elapsed="1.448166"/>
 </kw>
-<kw name="User input password" owner="LoginScreen">
+<kw name="Admin input password" owner="LoginScreen">
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-10T17:09:51.870565" level="INFO">Typing text 'password1' into text field '//XCUIElementTypeSecureTextField[@value="Password"]'</msg>
-<msg time="2025-08-10T17:09:51.870794" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeSecureTextField[@value="Password"]'}</msg>
-<msg time="2025-08-10T17:09:51.871243" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:51.979687" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:51.979932" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0C000000-0000-0000-3F81-010000000000","ELEMENT":"0C000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-48Tjfq8adryFtf20YtSSTMa29Mw"', 'Date': 'Sun, 10 Aug 2025 10:09:51 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:51.980062" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:51.980379" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0C000000-0000-0000-3F81-010000000000/value {'text': 'password1', 'value': ['p', 'a', 's', 's', 'w', 'o', 'r', 'd', '1']}</msg>
-<msg time="2025-08-10T17:09:51.980999" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:52.792208" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0C000000-0000-0000-3F81-010000000000/value HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:52.792503" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 10:09:52 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:52.792666" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:52.792908" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField[@value="Password"]</msg>
+<msg time="2025-08-10T20:34:58.831895" level="INFO">Typing text 'admin123' into text field '//XCUIElementTypeSecureTextField[@value="Password"]'</msg>
+<msg time="2025-08-10T20:34:58.832147" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeSecureTextField[@value="Password"]'}</msg>
+<msg time="2025-08-10T20:34:58.832715" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:34:58.929271" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:34:58.929564" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0C000000-0000-0000-D326-000000000000","ELEMENT":"0C000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-lFGFhHqWgIWwpbQQ3A0nEaXmU2s"', 'Date': 'Sun, 10 Aug 2025 13:34:58 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:34:58.929731" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:34:58.930135" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0C000000-0000-0000-D326-000000000000/value {'text': 'admin123', 'value': ['a', 'd', 'm', 'i', 'n', '1', '2', '3']}</msg>
+<msg time="2025-08-10T20:34:58.930919" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:34:59.738381" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0C000000-0000-0000-D326-000000000000/value HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:34:59.738797" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 13:34:59 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:34:59.738931" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:34:59.739205" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField[@value="Password"]</msg>
 <arg>${password_txtbox}</arg>
-<arg>${user_password}</arg>
+<arg>${admin_password}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:09:51.868542" elapsed="0.924479"/>
+<status status="PASS" start="2025-08-10T20:34:58.830282" elapsed="0.909015"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:09:51.868074" elapsed="0.925119"/>
+<status status="PASS" start="2025-08-10T20:34:58.829801" elapsed="0.909676"/>
 </kw>
 <kw name="User click login button" owner="LoginScreen">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-10T17:09:52.795826" level="INFO">Clicking element '//XCUIElementTypeButton[@name="Login"]'.</msg>
-<msg time="2025-08-10T17:09:52.795971" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeButton[@name="Login"]'}</msg>
-<msg time="2025-08-10T17:09:52.796354" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:52.883945" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:52.884153" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0D000000-0000-0000-3F81-010000000000","ELEMENT":"0D000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-QBzl5wMVrZBCMdVKn67AAZJOyCw"', 'Date': 'Sun, 10 Aug 2025 10:09:52 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:52.884356" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:52.884628" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0D000000-0000-0000-3F81-010000000000/click {}</msg>
-<msg time="2025-08-10T17:09:52.885060" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:53.589081" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0D000000-0000-0000-3F81-010000000000/click HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:53.589379" level="DEBUG">Remote response: status=200 | data={"value":null,"sessionId":"3919c017-4539-4b3e-b693-ffee891ea5b4"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '65', 'ETag': 'W/"41-gNHB4pcBaruiS2+5E/Tr11VOvv4"', 'Date': 'Sun, 10 Aug 2025 10:09:53 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:53.589546" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:53.589785" level="INFO">xpath criteria: //XCUIElementTypeButton[@name="Login"]</msg>
+<msg time="2025-08-10T20:34:59.742567" level="INFO">Clicking element '//XCUIElementTypeButton[@name="Login"]'.</msg>
+<msg time="2025-08-10T20:34:59.742838" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeButton[@name="Login"]'}</msg>
+<msg time="2025-08-10T20:34:59.743917" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:34:59.842865" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:34:59.843160" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0D000000-0000-0000-D326-000000000000","ELEMENT":"0D000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-dY28VjPESMKj+lsUkSJgcW3KixM"', 'Date': 'Sun, 10 Aug 2025 13:34:59 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:34:59.843463" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:34:59.843827" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0D000000-0000-0000-D326-000000000000/click {}</msg>
+<msg time="2025-08-10T20:34:59.844627" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:00.551258" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0D000000-0000-0000-D326-000000000000/click HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:00.551447" level="DEBUG">Remote response: status=200 | data={"value":null,"sessionId":"3b4c29b1-e903-4683-8f5f-629ddcc17bb0"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '65', 'ETag': 'W/"41-J9FptXfGJQUIfehi5A4f7avTSto"', 'Date': 'Sun, 10 Aug 2025 13:35:00 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:00.551543" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:00.551694" level="INFO">xpath criteria: //XCUIElementTypeButton[@name="Login"]</msg>
 <arg>${login_btn}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:09:52.793927" elapsed="0.795970"/>
+<status status="PASS" start="2025-08-10T20:34:59.740538" elapsed="0.811224"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:09:52.793576" elapsed="0.796486"/>
+<status status="PASS" start="2025-08-10T20:34:59.739961" elapsed="0.811904"/>
 </kw>
 <kw name="User see error message about username" owner="LoginScreen">
 <kw name="Element Text Should Be" owner="AppiumLibrary">
-<msg time="2025-08-10T17:09:53.593110" level="INFO">Verifying element '//XCUIElementTypeStaticText[@name="Username not found"]' contains exactly text 'Username not found'.</msg>
-<msg time="2025-08-10T17:09:53.593259" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeStaticText[@name="Username not found"]'}</msg>
-<msg time="2025-08-10T17:09:53.593642" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:53.670248" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:53.670486" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"6C000000-0000-0000-3F81-010000000000","ELEMENT":"6C000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-QVe2KwPCV6FJeRdIJb7RnosVxm0"', 'Date': 'Sun, 10 Aug 2025 10:09:53 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:53.670615" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:53.670933" level="DEBUG">GET http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/6C000000-0000-0000-3F81-010000000000/text {}</msg>
-<msg time="2025-08-10T17:09:53.671501" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:53.693290" level="DEBUG">http://127.0.0.1:4723 "GET /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/6C000000-0000-0000-3F81-010000000000/text HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:53.693496" level="DEBUG">Remote response: status=200 | data={"value":"Username not found","sessionId":"3919c017-4539-4b3e-b693-ffee891ea5b4"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '81', 'ETag': 'W/"51-WAMHFlMctbh00GDIyJnbMxpi8qA"', 'Date': 'Sun, 10 Aug 2025 10:09:53 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:53.693595" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:53.693769" level="INFO">xpath criteria: //XCUIElementTypeStaticText[@name="Username not found"]</msg>
+<msg time="2025-08-10T20:35:00.554283" level="INFO">Verifying element '//XCUIElementTypeStaticText[@name="Username not found"]' contains exactly text 'Username not found'.</msg>
+<msg time="2025-08-10T20:35:00.554408" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeStaticText[@name="Username not found"]'}</msg>
+<msg time="2025-08-10T20:35:00.554752" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:00.635227" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:00.635525" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"6C000000-0000-0000-D326-000000000000","ELEMENT":"6C000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-HtcigdeY2wX9iqgEp9GmmhVpIBE"', 'Date': 'Sun, 10 Aug 2025 13:35:00 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:00.635707" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:00.636047" level="DEBUG">GET http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/6C000000-0000-0000-D326-000000000000/text {}</msg>
+<msg time="2025-08-10T20:35:00.636784" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:00.657320" level="DEBUG">http://127.0.0.1:4723 "GET /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/6C000000-0000-0000-D326-000000000000/text HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:00.657638" level="DEBUG">Remote response: status=200 | data={"value":"Username not found","sessionId":"3b4c29b1-e903-4683-8f5f-629ddcc17bb0"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '81', 'ETag': 'W/"51-JdeuHO+rXkPO9mg5bnc3baSGWGg"', 'Date': 'Sun, 10 Aug 2025 13:35:00 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:00.657773" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:00.657983" level="INFO">xpath criteria: //XCUIElementTypeStaticText[@name="Username not found"]</msg>
 <arg>${errorMess_username}</arg>
 <arg>Username not found</arg>
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-10T17:09:53.591185" elapsed="0.102654"/>
+<status status="PASS" start="2025-08-10T20:35:00.552520" elapsed="0.105548"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:09:53.590512" elapsed="0.103434"/>
+<status status="PASS" start="2025-08-10T20:35:00.552149" elapsed="0.106053"/>
 </kw>
 <kw name="User click OK button" owner="LoginScreen">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-10T17:09:53.696575" level="INFO">Clicking element '//XCUIElementTypeButton[@name="OK"]'.</msg>
-<msg time="2025-08-10T17:09:53.696728" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeButton[@name="OK"]'}</msg>
-<msg time="2025-08-10T17:09:53.697121" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:53.756026" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:53.756338" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"74000000-0000-0000-3F81-010000000000","ELEMENT":"74000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-W/y9NxICcN5XsFY0ajxJuYVWPEY"', 'Date': 'Sun, 10 Aug 2025 10:09:53 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:53.756510" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:53.756846" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/74000000-0000-0000-3F81-010000000000/click {}</msg>
-<msg time="2025-08-10T17:09:53.758156" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:54.457082" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/74000000-0000-0000-3F81-010000000000/click HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:54.457445" level="DEBUG">Remote response: status=200 | data={"value":null,"sessionId":"3919c017-4539-4b3e-b693-ffee891ea5b4"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '65', 'ETag': 'W/"41-gNHB4pcBaruiS2+5E/Tr11VOvv4"', 'Date': 'Sun, 10 Aug 2025 10:09:54 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:54.457575" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:54.457776" level="INFO">xpath criteria: //XCUIElementTypeButton[@name="OK"]</msg>
+<msg time="2025-08-10T20:35:00.661112" level="INFO">Clicking element '//XCUIElementTypeButton[@name="OK"]'.</msg>
+<msg time="2025-08-10T20:35:00.661314" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeButton[@name="OK"]'}</msg>
+<msg time="2025-08-10T20:35:00.661744" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:00.721184" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:00.721494" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"74000000-0000-0000-D326-000000000000","ELEMENT":"74000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-pXMxu9l+7q2v0UPZh/LBRE63WdY"', 'Date': 'Sun, 10 Aug 2025 13:35:00 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:00.721676" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:00.722035" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/74000000-0000-0000-D326-000000000000/click {}</msg>
+<msg time="2025-08-10T20:35:00.722840" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:01.417569" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/74000000-0000-0000-D326-000000000000/click HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:01.417851" level="DEBUG">Remote response: status=200 | data={"value":null,"sessionId":"3b4c29b1-e903-4683-8f5f-629ddcc17bb0"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '65', 'ETag': 'W/"41-J9FptXfGJQUIfehi5A4f7avTSto"', 'Date': 'Sun, 10 Aug 2025 13:35:01 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:01.417984" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:01.418195" level="INFO">xpath criteria: //XCUIElementTypeButton[@name="OK"]</msg>
 <arg>${errorMess_ok_btn}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:09:53.694615" elapsed="0.763219"/>
+<status status="PASS" start="2025-08-10T20:35:00.659008" elapsed="0.759277"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:09:53.694244" elapsed="0.763687"/>
+<status status="PASS" start="2025-08-10T20:35:00.658553" elapsed="0.759874"/>
 </kw>
 <kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2025-08-10T17:09:54.460417" level="INFO">Clear text field '//XCUIElementTypeTextField'</msg>
-<msg time="2025-08-10T17:09:54.460570" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeTextField'}</msg>
-<msg time="2025-08-10T17:09:54.460997" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:54.553686" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:54.554036" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0B000000-0000-0000-3F81-010000000000","ELEMENT":"0B000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-o4ukwtOdcFGCGFxA18bQTarV1bU"', 'Date': 'Sun, 10 Aug 2025 10:09:54 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:54.554386" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:54.554765" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0B000000-0000-0000-3F81-010000000000/clear {}</msg>
-<msg time="2025-08-10T17:09:54.555571" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:55.171457" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0B000000-0000-0000-3F81-010000000000/clear HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:55.171751" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 10:09:55 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:55.171912" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:55.172142" level="INFO">xpath criteria: //XCUIElementTypeTextField</msg>
+<msg time="2025-08-10T20:35:01.420903" level="INFO">Clear text field '//XCUIElementTypeTextField'</msg>
+<msg time="2025-08-10T20:35:01.421057" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeTextField'}</msg>
+<msg time="2025-08-10T20:35:01.421484" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:01.512424" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:01.512722" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0B000000-0000-0000-D326-000000000000","ELEMENT":"0B000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-1z9g1wV+UXk6hPt3CmLh9+2nITM"', 'Date': 'Sun, 10 Aug 2025 13:35:01 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:01.513037" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:01.513390" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0B000000-0000-0000-D326-000000000000/clear {}</msg>
+<msg time="2025-08-10T20:35:01.514179" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:02.122014" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0B000000-0000-0000-D326-000000000000/clear HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:02.122323" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 13:35:02 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:02.122498" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:02.122737" level="INFO">xpath criteria: //XCUIElementTypeTextField</msg>
 <arg>//XCUIElementTypeTextField</arg>
 <doc>Clears the text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:09:54.458176" elapsed="0.714076"/>
+<status status="PASS" start="2025-08-10T20:35:01.418758" elapsed="0.704091"/>
 </kw>
 <kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2025-08-10T17:09:55.175222" level="INFO">Clear text field '//XCUIElementTypeSecureTextField'</msg>
-<msg time="2025-08-10T17:09:55.175356" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeSecureTextField'}</msg>
-<msg time="2025-08-10T17:09:55.175726" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:55.579496" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:55.579652" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0C000000-0000-0000-3F81-010000000000","ELEMENT":"0C000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-48Tjfq8adryFtf20YtSSTMa29Mw"', 'Date': 'Sun, 10 Aug 2025 10:09:55 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:55.579722" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:55.579986" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0C000000-0000-0000-3F81-010000000000/clear {}</msg>
-<msg time="2025-08-10T17:09:55.580757" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:56.214435" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0C000000-0000-0000-3F81-010000000000/clear HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:56.214670" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 10:09:56 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:56.214831" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:56.215030" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField</msg>
+<msg time="2025-08-10T20:35:02.126005" level="INFO">Clear text field '//XCUIElementTypeSecureTextField'</msg>
+<msg time="2025-08-10T20:35:02.126206" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeSecureTextField'}</msg>
+<msg time="2025-08-10T20:35:02.126762" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:02.540932" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:02.541084" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0C000000-0000-0000-D326-000000000000","ELEMENT":"0C000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-lFGFhHqWgIWwpbQQ3A0nEaXmU2s"', 'Date': 'Sun, 10 Aug 2025 13:35:02 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:02.541205" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:02.541541" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0C000000-0000-0000-D326-000000000000/clear {}</msg>
+<msg time="2025-08-10T20:35:02.542327" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:03.176931" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0C000000-0000-0000-D326-000000000000/clear HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:03.177227" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 13:35:03 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:03.177393" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:03.177622" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField</msg>
 <arg>//XCUIElementTypeSecureTextField</arg>
 <doc>Clears the text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:09:55.172792" elapsed="1.042323"/>
+<status status="PASS" start="2025-08-10T20:35:02.123277" elapsed="1.054456"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:09:43.521398" elapsed="12.694089"/>
+<status status="PASS" start="2025-08-10T20:34:50.372072" elapsed="12.806151"/>
 </test>
-<test id="s1-s1-s1-t2" name="User login unsuccessful with wrong password" line="20">
-<kw name="User input username" owner="LoginScreen">
+<test id="s1-s1-t2" name="User login unsuccessful with wrong password" line="20">
+<kw name="Admin input username" owner="LoginScreen">
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-10T17:09:56.219240" level="INFO">Typing text 'user1' into text field '//XCUIElementTypeTextField[@value="Username"]'</msg>
-<msg time="2025-08-10T17:09:56.219539" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeTextField[@value="Username"]'}</msg>
-<msg time="2025-08-10T17:09:56.220006" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:56.300602" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:56.300904" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0B000000-0000-0000-3F81-010000000000","ELEMENT":"0B000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-o4ukwtOdcFGCGFxA18bQTarV1bU"', 'Date': 'Sun, 10 Aug 2025 10:09:56 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:56.301076" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:56.301468" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0B000000-0000-0000-3F81-010000000000/value {'text': 'user1', 'value': ['u', 's', 'e', 'r', '1']}</msg>
-<msg time="2025-08-10T17:09:56.302325" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:57.021145" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0B000000-0000-0000-3F81-010000000000/value HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:57.021468" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 10:09:57 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:57.021614" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:57.021824" level="INFO">xpath criteria: //XCUIElementTypeTextField[@value="Username"]</msg>
+<msg time="2025-08-10T20:35:03.181734" level="INFO">Typing text 'admin' into text field '//XCUIElementTypeTextField[@value="Username"]'</msg>
+<msg time="2025-08-10T20:35:03.181873" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeTextField[@value="Username"]'}</msg>
+<msg time="2025-08-10T20:35:03.182252" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:03.260807" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:03.261100" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0B000000-0000-0000-D326-000000000000","ELEMENT":"0B000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-1z9g1wV+UXk6hPt3CmLh9+2nITM"', 'Date': 'Sun, 10 Aug 2025 13:35:03 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:03.261271" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:03.261673" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0B000000-0000-0000-D326-000000000000/value {'text': 'admin', 'value': ['a', 'd', 'm', 'i', 'n']}</msg>
+<msg time="2025-08-10T20:35:03.262421" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:03.979672" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0B000000-0000-0000-D326-000000000000/value HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:03.980012" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 13:35:03 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:03.980182" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:03.980439" level="INFO">xpath criteria: //XCUIElementTypeTextField[@value="Username"]</msg>
 <arg>${username_txtbox}</arg>
-<arg>${user_username}</arg>
+<arg>${admin_username}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:09:56.216726" elapsed="0.805183"/>
+<status status="PASS" start="2025-08-10T20:35:03.179810" elapsed="0.800761"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:09:56.216410" elapsed="0.805637"/>
+<status status="PASS" start="2025-08-10T20:35:03.179501" elapsed="0.801197"/>
 </kw>
-<kw name="User input wrong password" owner="LoginScreen">
+<kw name="Admin input wrong password" owner="LoginScreen">
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-10T17:09:57.026128" level="INFO">Typing text '1' into text field '//XCUIElementTypeSecureTextField[@value="Password"]'</msg>
-<msg time="2025-08-10T17:09:57.026413" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeSecureTextField[@value="Password"]'}</msg>
-<msg time="2025-08-10T17:09:57.026970" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:57.346157" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:57.346350" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0C000000-0000-0000-3F81-010000000000","ELEMENT":"0C000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-48Tjfq8adryFtf20YtSSTMa29Mw"', 'Date': 'Sun, 10 Aug 2025 10:09:57 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:57.346466" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:57.346746" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0C000000-0000-0000-3F81-010000000000/value {'text': '1', 'value': ['1']}</msg>
-<msg time="2025-08-10T17:09:57.347366" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:58.442587" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0C000000-0000-0000-3F81-010000000000/value HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:58.442808" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 10:09:58 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:58.442889" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:58.443104" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField[@value="Password"]</msg>
+<msg time="2025-08-10T20:35:03.984002" level="INFO">Typing text '1' into text field '//XCUIElementTypeSecureTextField[@value="Password"]'</msg>
+<msg time="2025-08-10T20:35:03.984190" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeSecureTextField[@value="Password"]'}</msg>
+<msg time="2025-08-10T20:35:03.984765" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:04.300214" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:04.300437" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0C000000-0000-0000-D326-000000000000","ELEMENT":"0C000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-lFGFhHqWgIWwpbQQ3A0nEaXmU2s"', 'Date': 'Sun, 10 Aug 2025 13:35:04 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:04.300540" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:04.300762" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0C000000-0000-0000-D326-000000000000/value {'text': '1', 'value': ['1']}</msg>
+<msg time="2025-08-10T20:35:04.301358" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:05.399218" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0C000000-0000-0000-D326-000000000000/value HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:05.399454" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 13:35:05 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:05.399567" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:05.399784" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField[@value="Password"]</msg>
 <arg>${password_txtbox}</arg>
 <arg>1</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:09:57.022988" elapsed="1.420242"/>
+<status status="PASS" start="2025-08-10T20:35:03.981640" elapsed="1.418251"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:09:57.022366" elapsed="1.421061"/>
+<status status="PASS" start="2025-08-10T20:35:03.981032" elapsed="1.419029"/>
 </kw>
 <kw name="User click login button" owner="LoginScreen">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-10T17:09:58.447337" level="INFO">Clicking element '//XCUIElementTypeButton[@name="Login"]'.</msg>
-<msg time="2025-08-10T17:09:58.447503" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeButton[@name="Login"]'}</msg>
-<msg time="2025-08-10T17:09:58.447952" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:58.784192" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:58.784498" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0D000000-0000-0000-3F81-010000000000","ELEMENT":"0D000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-QBzl5wMVrZBCMdVKn67AAZJOyCw"', 'Date': 'Sun, 10 Aug 2025 10:09:58 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:58.784679" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:58.785209" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0D000000-0000-0000-3F81-010000000000/click {}</msg>
-<msg time="2025-08-10T17:09:58.786221" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:59.493997" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0D000000-0000-0000-3F81-010000000000/click HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:59.494217" level="DEBUG">Remote response: status=200 | data={"value":null,"sessionId":"3919c017-4539-4b3e-b693-ffee891ea5b4"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '65', 'ETag': 'W/"41-gNHB4pcBaruiS2+5E/Tr11VOvv4"', 'Date': 'Sun, 10 Aug 2025 10:09:59 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:59.494310" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:59.494463" level="INFO">xpath criteria: //XCUIElementTypeButton[@name="Login"]</msg>
+<msg time="2025-08-10T20:35:05.403635" level="INFO">Clicking element '//XCUIElementTypeButton[@name="Login"]'.</msg>
+<msg time="2025-08-10T20:35:05.403818" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeButton[@name="Login"]'}</msg>
+<msg time="2025-08-10T20:35:05.404285" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:05.741853" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:05.742119" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0D000000-0000-0000-D326-000000000000","ELEMENT":"0D000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-dY28VjPESMKj+lsUkSJgcW3KixM"', 'Date': 'Sun, 10 Aug 2025 13:35:05 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:05.742365" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:05.742732" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0D000000-0000-0000-D326-000000000000/click {}</msg>
+<msg time="2025-08-10T20:35:05.743445" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:06.434902" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0D000000-0000-0000-D326-000000000000/click HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:06.435214" level="DEBUG">Remote response: status=200 | data={"value":null,"sessionId":"3b4c29b1-e903-4683-8f5f-629ddcc17bb0"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '65', 'ETag': 'W/"41-J9FptXfGJQUIfehi5A4f7avTSto"', 'Date': 'Sun, 10 Aug 2025 13:35:06 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:06.435383" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:06.435611" level="INFO">xpath criteria: //XCUIElementTypeButton[@name="Login"]</msg>
 <arg>${login_btn}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:09:58.444804" elapsed="1.049714"/>
+<status status="PASS" start="2025-08-10T20:35:05.401380" elapsed="1.034345"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:09:58.443961" elapsed="1.050677"/>
+<status status="PASS" start="2025-08-10T20:35:05.400813" elapsed="1.035077"/>
 </kw>
 <kw name="User see error message about password" owner="LoginScreen">
 <kw name="Element Text Should Be" owner="AppiumLibrary">
-<msg time="2025-08-10T17:09:59.496885" level="INFO">Verifying element '//XCUIElementTypeStaticText[@name="Incorrect password"]' contains exactly text 'Incorrect password'.</msg>
-<msg time="2025-08-10T17:09:59.497038" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeStaticText[@name="Incorrect password"]'}</msg>
-<msg time="2025-08-10T17:09:59.497435" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:59.577935" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:59.578128" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"B2000000-0000-0000-3F81-010000000000","ELEMENT":"B2000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-aA+t/n5Er2CbLMlGpTZ0FP8BvMY"', 'Date': 'Sun, 10 Aug 2025 10:09:59 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:59.578227" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:59.578494" level="DEBUG">GET http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/B2000000-0000-0000-3F81-010000000000/text {}</msg>
-<msg time="2025-08-10T17:09:59.579246" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:59.602432" level="DEBUG">http://127.0.0.1:4723 "GET /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/B2000000-0000-0000-3F81-010000000000/text HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:59.602663" level="DEBUG">Remote response: status=200 | data={"value":"Incorrect password","sessionId":"3919c017-4539-4b3e-b693-ffee891ea5b4"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '81', 'ETag': 'W/"51-dGRPmJ6/gxANgbHh8e5x/jE9AHE"', 'Date': 'Sun, 10 Aug 2025 10:09:59 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:59.602757" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:59.602922" level="INFO">xpath criteria: //XCUIElementTypeStaticText[@name="Incorrect password"]</msg>
+<msg time="2025-08-10T20:35:06.439570" level="INFO">Verifying element '//XCUIElementTypeStaticText[@name="Incorrect password"]' contains exactly text 'Incorrect password'.</msg>
+<msg time="2025-08-10T20:35:06.439723" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeStaticText[@name="Incorrect password"]'}</msg>
+<msg time="2025-08-10T20:35:06.440006" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:06.517631" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:06.517934" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"B1000000-0000-0000-D326-000000000000","ELEMENT":"B1000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-eV7eEBcABwGAN96A+3haxRCz6rk"', 'Date': 'Sun, 10 Aug 2025 13:35:06 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:06.518105" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:06.518453" level="DEBUG">GET http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/B1000000-0000-0000-D326-000000000000/text {}</msg>
+<msg time="2025-08-10T20:35:06.519202" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:06.539400" level="DEBUG">http://127.0.0.1:4723 "GET /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/B1000000-0000-0000-D326-000000000000/text HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:06.539699" level="DEBUG">Remote response: status=200 | data={"value":"Incorrect password","sessionId":"3b4c29b1-e903-4683-8f5f-629ddcc17bb0"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '81', 'ETag': 'W/"51-0CAnZ4p+9GTVk8nJbAvc5YCwAm8"', 'Date': 'Sun, 10 Aug 2025 13:35:06 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:06.539877" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:06.540137" level="INFO">xpath criteria: //XCUIElementTypeStaticText[@name="Incorrect password"]</msg>
 <arg>${errorMess_password}</arg>
 <arg>Incorrect password</arg>
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-10T17:09:59.495403" elapsed="0.107576"/>
+<status status="PASS" start="2025-08-10T20:35:06.436954" elapsed="0.103296"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:09:59.495081" elapsed="0.108000"/>
+<status status="PASS" start="2025-08-10T20:35:06.436353" elapsed="0.104070"/>
 </kw>
 <kw name="User click OK button" owner="LoginScreen">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-10T17:09:59.605205" level="INFO">Clicking element '//XCUIElementTypeButton[@name="OK"]'.</msg>
-<msg time="2025-08-10T17:09:59.605326" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeButton[@name="OK"]'}</msg>
-<msg time="2025-08-10T17:09:59.605649" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:09:59.665371" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:09:59.665774" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"BA000000-0000-0000-3F81-010000000000","ELEMENT":"BA000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-RgQwrie3xWdlPk+idiC9cDfPDwM"', 'Date': 'Sun, 10 Aug 2025 10:09:59 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:09:59.665974" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:09:59.666713" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/BA000000-0000-0000-3F81-010000000000/click {}</msg>
-<msg time="2025-08-10T17:09:59.667537" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:00.408577" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/BA000000-0000-0000-3F81-010000000000/click HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:00.408912" level="DEBUG">Remote response: status=200 | data={"value":null,"sessionId":"3919c017-4539-4b3e-b693-ffee891ea5b4"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '65', 'ETag': 'W/"41-gNHB4pcBaruiS2+5E/Tr11VOvv4"', 'Date': 'Sun, 10 Aug 2025 10:10:00 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:00.409131" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:00.409371" level="INFO">xpath criteria: //XCUIElementTypeButton[@name="OK"]</msg>
+<msg time="2025-08-10T20:35:06.543883" level="INFO">Clicking element '//XCUIElementTypeButton[@name="OK"]'.</msg>
+<msg time="2025-08-10T20:35:06.544802" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeButton[@name="OK"]'}</msg>
+<msg time="2025-08-10T20:35:06.545290" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:06.606259" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:06.606557" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"B9000000-0000-0000-D326-000000000000","ELEMENT":"B9000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-LKQDiPXc0qOXyi44QciWrM+Aklg"', 'Date': 'Sun, 10 Aug 2025 13:35:06 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:06.606732" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:06.607200" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/B9000000-0000-0000-D326-000000000000/click {}</msg>
+<msg time="2025-08-10T20:35:06.608001" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:07.316615" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/B9000000-0000-0000-D326-000000000000/click HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:07.316798" level="DEBUG">Remote response: status=200 | data={"value":null,"sessionId":"3b4c29b1-e903-4683-8f5f-629ddcc17bb0"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '65', 'ETag': 'W/"41-J9FptXfGJQUIfehi5A4f7avTSto"', 'Date': 'Sun, 10 Aug 2025 13:35:07 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:07.316889" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:07.317035" level="INFO">xpath criteria: //XCUIElementTypeButton[@name="OK"]</msg>
 <arg>${errorMess_ok_btn}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:09:59.603659" elapsed="0.805803"/>
+<status status="PASS" start="2025-08-10T20:35:06.541441" elapsed="0.775658"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:09:59.603339" elapsed="0.806273"/>
+<status status="PASS" start="2025-08-10T20:35:06.540871" elapsed="0.776332"/>
 </kw>
 <kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2025-08-10T17:10:00.412149" level="INFO">Clear text field '//XCUIElementTypeTextField'</msg>
-<msg time="2025-08-10T17:10:00.412322" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeTextField'}</msg>
-<msg time="2025-08-10T17:10:00.412736" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:00.495906" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:00.496163" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0B000000-0000-0000-3F81-010000000000","ELEMENT":"0B000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-o4ukwtOdcFGCGFxA18bQTarV1bU"', 'Date': 'Sun, 10 Aug 2025 10:10:00 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:00.496257" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:00.496443" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0B000000-0000-0000-3F81-010000000000/clear {}</msg>
-<msg time="2025-08-10T17:10:00.496786" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:01.102532" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0B000000-0000-0000-3F81-010000000000/clear HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:01.102837" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 10:10:01 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:01.103007" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:01.103605" level="INFO">xpath criteria: //XCUIElementTypeTextField</msg>
+<msg time="2025-08-10T20:35:07.319448" level="INFO">Clear text field '//XCUIElementTypeTextField'</msg>
+<msg time="2025-08-10T20:35:07.319611" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeTextField'}</msg>
+<msg time="2025-08-10T20:35:07.320011" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:07.393386" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:07.393743" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0B000000-0000-0000-D326-000000000000","ELEMENT":"0B000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-1z9g1wV+UXk6hPt3CmLh9+2nITM"', 'Date': 'Sun, 10 Aug 2025 13:35:07 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:07.394043" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:07.394543" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0B000000-0000-0000-D326-000000000000/clear {}</msg>
+<msg time="2025-08-10T20:35:07.395357" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:08.025644" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0B000000-0000-0000-D326-000000000000/clear HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:08.025933" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 13:35:08 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:08.026090" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:08.026315" level="INFO">xpath criteria: //XCUIElementTypeTextField</msg>
 <arg>//XCUIElementTypeTextField</arg>
 <doc>Clears the text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:10:00.409928" elapsed="0.693754"/>
+<status status="PASS" start="2025-08-10T20:35:07.317477" elapsed="0.708950"/>
 </kw>
 <kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2025-08-10T17:10:01.106456" level="INFO">Clear text field '//XCUIElementTypeSecureTextField'</msg>
-<msg time="2025-08-10T17:10:01.106604" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeSecureTextField'}</msg>
-<msg time="2025-08-10T17:10:01.107004" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:01.174997" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:01.175228" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0C000000-0000-0000-3F81-010000000000","ELEMENT":"0C000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-48Tjfq8adryFtf20YtSSTMa29Mw"', 'Date': 'Sun, 10 Aug 2025 10:10:01 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:01.175362" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:01.175644" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0C000000-0000-0000-3F81-010000000000/clear {}</msg>
-<msg time="2025-08-10T17:10:01.176242" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:01.795590" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0C000000-0000-0000-3F81-010000000000/clear HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:01.795787" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 10:10:01 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:01.795882" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:01.796039" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField</msg>
+<msg time="2025-08-10T20:35:08.030427" level="INFO">Clear text field '//XCUIElementTypeSecureTextField'</msg>
+<msg time="2025-08-10T20:35:08.030661" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeSecureTextField'}</msg>
+<msg time="2025-08-10T20:35:08.031318" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:08.109381" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:08.109574" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0C000000-0000-0000-D326-000000000000","ELEMENT":"0C000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-lFGFhHqWgIWwpbQQ3A0nEaXmU2s"', 'Date': 'Sun, 10 Aug 2025 13:35:08 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:08.109668" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:08.109884" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0C000000-0000-0000-D326-000000000000/clear {}</msg>
+<msg time="2025-08-10T20:35:08.110332" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:08.741198" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0C000000-0000-0000-D326-000000000000/clear HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:08.741488" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 13:35:08 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:08.741651" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:08.741887" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField</msg>
 <arg>//XCUIElementTypeSecureTextField</arg>
 <doc>Clears the text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:10:01.104085" elapsed="0.692022"/>
+<status status="PASS" start="2025-08-10T20:35:08.026833" elapsed="0.715167"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:09:56.215855" elapsed="5.580548"/>
+<status status="PASS" start="2025-08-10T20:35:03.178704" elapsed="5.563688"/>
 </test>
-<test id="s1-s1-s1-t3" name="User login unsuccessful with wrong username and password" line="29">
-<kw name="User input wrong username" owner="LoginScreen">
+<test id="s1-s1-t3" name="User login unsuccessful with wrong username and password" line="29">
+<kw name="Admin input wrong username" owner="LoginScreen">
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-10T17:10:01.799847" level="INFO">Typing text 'testaccount' into text field '//XCUIElementTypeTextField[@value="Username"]'</msg>
-<msg time="2025-08-10T17:10:01.800032" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeTextField[@value="Username"]'}</msg>
-<msg time="2025-08-10T17:10:01.800519" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:01.881098" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:01.881312" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0B000000-0000-0000-3F81-010000000000","ELEMENT":"0B000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-o4ukwtOdcFGCGFxA18bQTarV1bU"', 'Date': 'Sun, 10 Aug 2025 10:10:01 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:01.881468" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:01.881769" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0B000000-0000-0000-3F81-010000000000/value {'text': 'testaccount', 'value': ['t', 'e', 's', 't', 'a', 'c', 'c', 'o', 'u', 'n', 't']}</msg>
-<msg time="2025-08-10T17:10:01.882553" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:02.692804" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0B000000-0000-0000-3F81-010000000000/value HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:02.693058" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 10:10:02 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:02.693154" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:02.693365" level="INFO">xpath criteria: //XCUIElementTypeTextField[@value="Username"]</msg>
+<msg time="2025-08-10T20:35:08.745481" level="INFO">Typing text 'adminTestAccount' into text field '//XCUIElementTypeTextField[@value="Username"]'</msg>
+<msg time="2025-08-10T20:35:08.745619" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeTextField[@value="Username"]'}</msg>
+<msg time="2025-08-10T20:35:08.745998" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:08.827692" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:08.827865" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0B000000-0000-0000-D326-000000000000","ELEMENT":"0B000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-1z9g1wV+UXk6hPt3CmLh9+2nITM"', 'Date': 'Sun, 10 Aug 2025 13:35:08 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:08.827950" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:08.828173" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0B000000-0000-0000-D326-000000000000/value {'text': 'adminTestAccount', 'value': ['a', 'd', 'm', 'i', 'n', 'T', 'e', 's', 't', 'A', 'c', 'c', 'o', 'u', 'n', 't']}</msg>
+<msg time="2025-08-10T20:35:08.828637" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:09.743414" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0B000000-0000-0000-D326-000000000000/value HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:09.743911" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 13:35:09 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:09.744139" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:09.745042" level="INFO">xpath criteria: //XCUIElementTypeTextField[@value="Username"]</msg>
 <arg>${username_txtbox}</arg>
-<arg>testaccount</arg>
+<arg>adminTestAccount</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:10:01.797676" elapsed="0.895828"/>
+<status status="PASS" start="2025-08-10T20:35:08.743520" elapsed="1.001671"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:10:01.797316" elapsed="0.896384"/>
+<status status="PASS" start="2025-08-10T20:35:08.743224" elapsed="1.002209"/>
 </kw>
-<kw name="User input wrong password" owner="LoginScreen">
+<kw name="Admin input wrong password" owner="LoginScreen">
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-10T17:10:02.696910" level="INFO">Typing text '1' into text field '//XCUIElementTypeSecureTextField[@value="Password"]'</msg>
-<msg time="2025-08-10T17:10:02.697058" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeSecureTextField[@value="Password"]'}</msg>
-<msg time="2025-08-10T17:10:02.697452" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:02.930228" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:02.930466" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0C000000-0000-0000-3F81-010000000000","ELEMENT":"0C000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-48Tjfq8adryFtf20YtSSTMa29Mw"', 'Date': 'Sun, 10 Aug 2025 10:10:02 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:02.930598" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:02.930973" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0C000000-0000-0000-3F81-010000000000/value {'text': '1', 'value': ['1']}</msg>
-<msg time="2025-08-10T17:10:02.931438" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:04.031573" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0C000000-0000-0000-3F81-010000000000/value HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:04.032173" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 10:10:04 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:04.032308" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:04.032601" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField[@value="Password"]</msg>
+<msg time="2025-08-10T20:35:09.748934" level="INFO">Typing text '1' into text field '//XCUIElementTypeSecureTextField[@value="Password"]'</msg>
+<msg time="2025-08-10T20:35:09.749242" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeSecureTextField[@value="Password"]'}</msg>
+<msg time="2025-08-10T20:35:09.750142" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:09.866427" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:09.866724" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0C000000-0000-0000-D326-000000000000","ELEMENT":"0C000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-lFGFhHqWgIWwpbQQ3A0nEaXmU2s"', 'Date': 'Sun, 10 Aug 2025 13:35:09 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:09.866895" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:09.867261" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0C000000-0000-0000-D326-000000000000/value {'text': '1', 'value': ['1']}</msg>
+<msg time="2025-08-10T20:35:09.868031" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:10.977094" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0C000000-0000-0000-D326-000000000000/value HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:10.977219" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 13:35:10 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:10.977267" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:10.977365" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField[@value="Password"]</msg>
 <arg>${password_txtbox}</arg>
 <arg>1</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:10:02.694783" elapsed="1.337957"/>
+<status status="PASS" start="2025-08-10T20:35:09.746915" elapsed="1.230484"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:10:02.694187" elapsed="1.339016"/>
+<status status="PASS" start="2025-08-10T20:35:09.746334" elapsed="1.231133"/>
 </kw>
 <kw name="User click login button" owner="LoginScreen">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-10T17:10:04.037956" level="INFO">Clicking element '//XCUIElementTypeButton[@name="Login"]'.</msg>
-<msg time="2025-08-10T17:10:04.038175" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeButton[@name="Login"]'}</msg>
-<msg time="2025-08-10T17:10:04.038622" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:04.368371" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:04.368769" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0D000000-0000-0000-3F81-010000000000","ELEMENT":"0D000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-QBzl5wMVrZBCMdVKn67AAZJOyCw"', 'Date': 'Sun, 10 Aug 2025 10:10:04 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:04.368909" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:04.369197" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0D000000-0000-0000-3F81-010000000000/click {}</msg>
-<msg time="2025-08-10T17:10:04.369771" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:05.057660" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0D000000-0000-0000-3F81-010000000000/click HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:05.057850" level="DEBUG">Remote response: status=200 | data={"value":null,"sessionId":"3919c017-4539-4b3e-b693-ffee891ea5b4"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '65', 'ETag': 'W/"41-gNHB4pcBaruiS2+5E/Tr11VOvv4"', 'Date': 'Sun, 10 Aug 2025 10:10:05 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:05.057946" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:05.058104" level="INFO">xpath criteria: //XCUIElementTypeButton[@name="Login"]</msg>
+<msg time="2025-08-10T20:35:10.978568" level="INFO">Clicking element '//XCUIElementTypeButton[@name="Login"]'.</msg>
+<msg time="2025-08-10T20:35:10.978641" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeButton[@name="Login"]'}</msg>
+<msg time="2025-08-10T20:35:10.978837" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:11.310357" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:11.310661" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0D000000-0000-0000-D326-000000000000","ELEMENT":"0D000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-dY28VjPESMKj+lsUkSJgcW3KixM"', 'Date': 'Sun, 10 Aug 2025 13:35:11 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:11.310836" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:11.311174" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0D000000-0000-0000-D326-000000000000/click {}</msg>
+<msg time="2025-08-10T20:35:11.311968" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:11.996878" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0D000000-0000-0000-D326-000000000000/click HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:11.997031" level="DEBUG">Remote response: status=200 | data={"value":null,"sessionId":"3b4c29b1-e903-4683-8f5f-629ddcc17bb0"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '65', 'ETag': 'W/"41-J9FptXfGJQUIfehi5A4f7avTSto"', 'Date': 'Sun, 10 Aug 2025 13:35:11 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:11.997102" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:11.997217" level="INFO">xpath criteria: //XCUIElementTypeButton[@name="Login"]</msg>
 <arg>${login_btn}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:10:04.035152" elapsed="1.023037"/>
+<status status="PASS" start="2025-08-10T20:35:10.977797" elapsed="1.019481"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:10:04.034225" elapsed="1.024092"/>
+<status status="PASS" start="2025-08-10T20:35:10.977634" elapsed="1.019813"/>
 </kw>
 <kw name="User see error message about username" owner="LoginScreen">
 <kw name="Element Text Should Be" owner="AppiumLibrary">
-<msg time="2025-08-10T17:10:05.061132" level="INFO">Verifying element '//XCUIElementTypeStaticText[@name="Username not found"]' contains exactly text 'Username not found'.</msg>
-<msg time="2025-08-10T17:10:05.061286" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeStaticText[@name="Username not found"]'}</msg>
-<msg time="2025-08-10T17:10:05.061677" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:05.136751" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:05.137064" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"F7000000-0000-0000-3F81-010000000000","ELEMENT":"F7000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-vYeUMPGrX9LYefuuy8eG+soS+bA"', 'Date': 'Sun, 10 Aug 2025 10:10:05 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:05.137246" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:05.137940" level="DEBUG">GET http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/F7000000-0000-0000-3F81-010000000000/text {}</msg>
-<msg time="2025-08-10T17:10:05.139065" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:05.159616" level="DEBUG">http://127.0.0.1:4723 "GET /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/F7000000-0000-0000-3F81-010000000000/text HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:05.159843" level="DEBUG">Remote response: status=200 | data={"value":"Username not found","sessionId":"3919c017-4539-4b3e-b693-ffee891ea5b4"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '81', 'ETag': 'W/"51-WAMHFlMctbh00GDIyJnbMxpi8qA"', 'Date': 'Sun, 10 Aug 2025 10:10:05 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:05.159965" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:05.160160" level="INFO">xpath criteria: //XCUIElementTypeStaticText[@name="Username not found"]</msg>
+<msg time="2025-08-10T20:35:12.000879" level="INFO">Verifying element '//XCUIElementTypeStaticText[@name="Username not found"]' contains exactly text 'Username not found'.</msg>
+<msg time="2025-08-10T20:35:12.001019" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeStaticText[@name="Username not found"]'}</msg>
+<msg time="2025-08-10T20:35:12.001398" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:12.072145" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:12.072381" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"F5000000-0000-0000-D326-000000000000","ELEMENT":"F5000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-oetTI4nbu2s7vNA843Ka6BLXQ+o"', 'Date': 'Sun, 10 Aug 2025 13:35:12 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:12.072516" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:12.072805" level="DEBUG">GET http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/F5000000-0000-0000-D326-000000000000/text {}</msg>
+<msg time="2025-08-10T20:35:12.073469" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:12.095067" level="DEBUG">http://127.0.0.1:4723 "GET /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/F5000000-0000-0000-D326-000000000000/text HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:12.095249" level="DEBUG">Remote response: status=200 | data={"value":"Username not found","sessionId":"3b4c29b1-e903-4683-8f5f-629ddcc17bb0"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '81', 'ETag': 'W/"51-JdeuHO+rXkPO9mg5bnc3baSGWGg"', 'Date': 'Sun, 10 Aug 2025 13:35:12 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:12.095338" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:12.095491" level="INFO">xpath criteria: //XCUIElementTypeStaticText[@name="Username not found"]</msg>
 <arg>${errorMess_username}</arg>
 <arg>Username not found</arg>
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-10T17:10:05.059110" elapsed="0.101133"/>
+<status status="PASS" start="2025-08-10T20:35:11.998494" elapsed="0.097062"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:10:05.058661" elapsed="0.101715"/>
+<status status="PASS" start="2025-08-10T20:35:11.997899" elapsed="0.097760"/>
 </kw>
 <kw name="User click OK button" owner="LoginScreen">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-10T17:10:05.163100" level="INFO">Clicking element '//XCUIElementTypeButton[@name="OK"]'.</msg>
-<msg time="2025-08-10T17:10:05.163244" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeButton[@name="OK"]'}</msg>
-<msg time="2025-08-10T17:10:05.163637" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:05.226613" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:05.226804" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"FF000000-0000-0000-3F81-010000000000","ELEMENT":"FF000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-Q9Nmpdf8AK0qRUgHYhCDwKgTLfI"', 'Date': 'Sun, 10 Aug 2025 10:10:05 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:05.226903" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:05.227116" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/FF000000-0000-0000-3F81-010000000000/click {}</msg>
-<msg time="2025-08-10T17:10:05.227568" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:05.973136" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/FF000000-0000-0000-3F81-010000000000/click HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:05.973460" level="DEBUG">Remote response: status=200 | data={"value":null,"sessionId":"3919c017-4539-4b3e-b693-ffee891ea5b4"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '65', 'ETag': 'W/"41-gNHB4pcBaruiS2+5E/Tr11VOvv4"', 'Date': 'Sun, 10 Aug 2025 10:10:05 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:05.973598" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:05.973790" level="INFO">xpath criteria: //XCUIElementTypeButton[@name="OK"]</msg>
+<msg time="2025-08-10T20:35:12.098174" level="INFO">Clicking element '//XCUIElementTypeButton[@name="OK"]'.</msg>
+<msg time="2025-08-10T20:35:12.098306" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeButton[@name="OK"]'}</msg>
+<msg time="2025-08-10T20:35:12.098683" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:12.157080" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:12.157374" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"FD000000-0000-0000-D326-000000000000","ELEMENT":"FD000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-YUfa473Zla8UQYuoHZrroq2hLiM"', 'Date': 'Sun, 10 Aug 2025 13:35:12 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:12.157549" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:12.157889" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/FD000000-0000-0000-D326-000000000000/click {}</msg>
+<msg time="2025-08-10T20:35:12.158676" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:12.882114" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/FD000000-0000-0000-D326-000000000000/click HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:12.882275" level="DEBUG">Remote response: status=200 | data={"value":null,"sessionId":"3b4c29b1-e903-4683-8f5f-629ddcc17bb0"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '65', 'ETag': 'W/"41-J9FptXfGJQUIfehi5A4f7avTSto"', 'Date': 'Sun, 10 Aug 2025 13:35:12 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:12.882351" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:12.882473" level="INFO">xpath criteria: //XCUIElementTypeButton[@name="OK"]</msg>
 <arg>${errorMess_ok_btn}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:10:05.161156" elapsed="0.812741"/>
+<status status="PASS" start="2025-08-10T20:35:12.096290" elapsed="0.786233"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:10:05.160714" elapsed="0.813355"/>
+<status status="PASS" start="2025-08-10T20:35:12.095942" elapsed="0.786663"/>
 </kw>
 <kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2025-08-10T17:10:05.976539" level="INFO">Clear text field '//XCUIElementTypeTextField'</msg>
-<msg time="2025-08-10T17:10:05.976738" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeTextField'}</msg>
-<msg time="2025-08-10T17:10:05.977174" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:06.060561" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:06.060866" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0B000000-0000-0000-3F81-010000000000","ELEMENT":"0B000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-o4ukwtOdcFGCGFxA18bQTarV1bU"', 'Date': 'Sun, 10 Aug 2025 10:10:06 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:06.061054" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:06.061484" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0B000000-0000-0000-3F81-010000000000/clear {}</msg>
-<msg time="2025-08-10T17:10:06.061897" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:06.686835" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0B000000-0000-0000-3F81-010000000000/clear HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:06.687131" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 10:10:06 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:06.687304" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:06.687536" level="INFO">xpath criteria: //XCUIElementTypeTextField</msg>
+<msg time="2025-08-10T20:35:12.884976" level="INFO">Clear text field '//XCUIElementTypeTextField'</msg>
+<msg time="2025-08-10T20:35:12.885153" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeTextField'}</msg>
+<msg time="2025-08-10T20:35:12.885560" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:12.967678" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:12.967971" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0B000000-0000-0000-D326-000000000000","ELEMENT":"0B000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-1z9g1wV+UXk6hPt3CmLh9+2nITM"', 'Date': 'Sun, 10 Aug 2025 13:35:12 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:12.968143" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:12.968478" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0B000000-0000-0000-D326-000000000000/clear {}</msg>
+<msg time="2025-08-10T20:35:12.969230" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:13.581808" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0B000000-0000-0000-D326-000000000000/clear HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:13.582096" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 13:35:13 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:13.582256" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:13.582493" level="INFO">xpath criteria: //XCUIElementTypeTextField</msg>
 <arg>//XCUIElementTypeTextField</arg>
 <doc>Clears the text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:10:05.974386" elapsed="0.713262"/>
+<status status="PASS" start="2025-08-10T20:35:12.882802" elapsed="0.699799"/>
 </kw>
 <kw name="Clear Text" owner="AppiumLibrary">
-<msg time="2025-08-10T17:10:06.690572" level="INFO">Clear text field '//XCUIElementTypeSecureTextField'</msg>
-<msg time="2025-08-10T17:10:06.690726" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeSecureTextField'}</msg>
-<msg time="2025-08-10T17:10:06.691088" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:06.768993" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:06.769187" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0C000000-0000-0000-3F81-010000000000","ELEMENT":"0C000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-48Tjfq8adryFtf20YtSSTMa29Mw"', 'Date': 'Sun, 10 Aug 2025 10:10:06 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:06.769277" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:06.769473" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0C000000-0000-0000-3F81-010000000000/clear {}</msg>
-<msg time="2025-08-10T17:10:06.769865" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:07.398614" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0C000000-0000-0000-3F81-010000000000/clear HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:07.398907" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 10:10:07 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:07.399008" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:07.399264" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField</msg>
+<msg time="2025-08-10T20:35:13.585118" level="INFO">Clear text field '//XCUIElementTypeSecureTextField'</msg>
+<msg time="2025-08-10T20:35:13.585256" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeSecureTextField'}</msg>
+<msg time="2025-08-10T20:35:13.585634" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:13.662334" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:13.662634" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0C000000-0000-0000-D326-000000000000","ELEMENT":"0C000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-lFGFhHqWgIWwpbQQ3A0nEaXmU2s"', 'Date': 'Sun, 10 Aug 2025 13:35:13 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:13.662804" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:13.663131" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0C000000-0000-0000-D326-000000000000/clear {}</msg>
+<msg time="2025-08-10T20:35:13.663867" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:14.293151" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0C000000-0000-0000-D326-000000000000/clear HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:14.293574" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 13:35:14 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:14.293742" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:14.293969" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField</msg>
 <arg>//XCUIElementTypeSecureTextField</arg>
 <doc>Clears the text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:10:06.688065" elapsed="0.711285"/>
+<status status="PASS" start="2025-08-10T20:35:13.583010" elapsed="0.711065"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:10:01.796705" elapsed="5.603026"/>
+<status status="PASS" start="2025-08-10T20:35:08.742697" elapsed="5.551748"/>
 </test>
-<test id="s1-s1-s1-t4" name="User login successfully with correct username and password" line="38">
-<kw name="User input username" owner="LoginScreen">
+<test id="s1-s1-t4" name="User login successfully with correct username and password" line="38">
+<kw name="Admin input username" owner="LoginScreen">
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-10T17:10:07.403120" level="INFO">Typing text 'user1' into text field '//XCUIElementTypeTextField[@value="Username"]'</msg>
-<msg time="2025-08-10T17:10:07.403299" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeTextField[@value="Username"]'}</msg>
-<msg time="2025-08-10T17:10:07.403707" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:07.484500" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:07.484704" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0B000000-0000-0000-3F81-010000000000","ELEMENT":"0B000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-o4ukwtOdcFGCGFxA18bQTarV1bU"', 'Date': 'Sun, 10 Aug 2025 10:10:07 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:07.484805" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:07.485058" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0B000000-0000-0000-3F81-010000000000/value {'text': 'user1', 'value': ['u', 's', 'e', 'r', '1']}</msg>
-<msg time="2025-08-10T17:10:07.485526" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:08.192897" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0B000000-0000-0000-3F81-010000000000/value HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:08.193328" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 10:10:08 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:08.193529" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:08.193827" level="INFO">xpath criteria: //XCUIElementTypeTextField[@value="Username"]</msg>
+<msg time="2025-08-10T20:35:14.298184" level="INFO">Typing text 'admin' into text field '//XCUIElementTypeTextField[@value="Username"]'</msg>
+<msg time="2025-08-10T20:35:14.298320" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeTextField[@value="Username"]'}</msg>
+<msg time="2025-08-10T20:35:14.298697" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:14.376110" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:14.376400" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0B000000-0000-0000-D326-000000000000","ELEMENT":"0B000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-1z9g1wV+UXk6hPt3CmLh9+2nITM"', 'Date': 'Sun, 10 Aug 2025 13:35:14 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:14.376568" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:14.376942" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0B000000-0000-0000-D326-000000000000/value {'text': 'admin', 'value': ['a', 'd', 'm', 'i', 'n']}</msg>
+<msg time="2025-08-10T20:35:14.377699" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:15.091601" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0B000000-0000-0000-D326-000000000000/value HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:15.091846" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 13:35:15 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:15.091948" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:15.092192" level="INFO">xpath criteria: //XCUIElementTypeTextField[@value="Username"]</msg>
 <arg>${username_txtbox}</arg>
-<arg>${user_username}</arg>
+<arg>${admin_username}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:10:07.401140" elapsed="0.792818"/>
+<status status="PASS" start="2025-08-10T20:35:14.296262" elapsed="0.796021"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:10:07.400774" elapsed="0.793424"/>
+<status status="PASS" start="2025-08-10T20:35:14.295801" elapsed="0.796618"/>
 </kw>
-<kw name="User input password" owner="LoginScreen">
+<kw name="Admin input password" owner="LoginScreen">
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2025-08-10T17:10:08.197441" level="INFO">Typing text 'password1' into text field '//XCUIElementTypeSecureTextField[@value="Password"]'</msg>
-<msg time="2025-08-10T17:10:08.197661" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeSecureTextField[@value="Password"]'}</msg>
-<msg time="2025-08-10T17:10:08.198218" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:08.522301" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:08.522601" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0C000000-0000-0000-3F81-010000000000","ELEMENT":"0C000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-48Tjfq8adryFtf20YtSSTMa29Mw"', 'Date': 'Sun, 10 Aug 2025 10:10:08 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:08.522764" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:08.523068" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0C000000-0000-0000-3F81-010000000000/value {'text': 'password1', 'value': ['p', 'a', 's', 's', 'w', 'o', 'r', 'd', '1']}</msg>
-<msg time="2025-08-10T17:10:08.523638" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:09.728476" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0C000000-0000-0000-3F81-010000000000/value HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:09.728749" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 10:10:09 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:09.728844" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:09.729028" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField[@value="Password"]</msg>
+<msg time="2025-08-10T20:35:15.096724" level="INFO">Typing text 'admin123' into text field '//XCUIElementTypeSecureTextField[@value="Password"]'</msg>
+<msg time="2025-08-10T20:35:15.097084" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeSecureTextField[@value="Password"]'}</msg>
+<msg time="2025-08-10T20:35:15.097673" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:15.425865" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:15.426185" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0C000000-0000-0000-D326-000000000000","ELEMENT":"0C000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-lFGFhHqWgIWwpbQQ3A0nEaXmU2s"', 'Date': 'Sun, 10 Aug 2025 13:35:15 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:15.426470" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:15.427166" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0C000000-0000-0000-D326-000000000000/value {'text': 'admin123', 'value': ['a', 'd', 'm', 'i', 'n', '1', '2', '3']}</msg>
+<msg time="2025-08-10T20:35:15.427966" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:16.621330" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0C000000-0000-0000-D326-000000000000/value HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:16.621856" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '14', 'ETag': 'W/"e-9/1BuKMgFObM1mWJm+YjxtXJnUM"', 'Date': 'Sun, 10 Aug 2025 13:35:16 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:16.622060" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:16.622508" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField[@value="Password"]</msg>
 <arg>${password_txtbox}</arg>
-<arg>${user_password}</arg>
+<arg>${admin_password}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:10:08.195137" elapsed="1.533956"/>
+<status status="PASS" start="2025-08-10T20:35:15.093574" elapsed="1.529080"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:10:08.194654" elapsed="1.534586"/>
+<status status="PASS" start="2025-08-10T20:35:15.093110" elapsed="1.529755"/>
 </kw>
 <kw name="User click login button" owner="LoginScreen">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2025-08-10T17:10:09.733778" level="INFO">Clicking element '//XCUIElementTypeButton[@name="Login"]'.</msg>
-<msg time="2025-08-10T17:10:09.734161" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'xpath', 'value': '//XCUIElementTypeButton[@name="Login"]'}</msg>
-<msg time="2025-08-10T17:10:09.736838" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:09.964615" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:09.964922" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0D000000-0000-0000-3F81-010000000000","ELEMENT":"0D000000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-QBzl5wMVrZBCMdVKn67AAZJOyCw"', 'Date': 'Sun, 10 Aug 2025 10:10:09 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:09.965106" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:09.965488" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0D000000-0000-0000-3F81-010000000000/click {}</msg>
-<msg time="2025-08-10T17:10:09.966564" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:10.313566" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/0D000000-0000-0000-3F81-010000000000/click HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:10.313844" level="DEBUG">Remote response: status=200 | data={"value":null,"sessionId":"3919c017-4539-4b3e-b693-ffee891ea5b4"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '65', 'ETag': 'W/"41-gNHB4pcBaruiS2+5E/Tr11VOvv4"', 'Date': 'Sun, 10 Aug 2025 10:10:10 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:10.313960" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:10.314162" level="INFO">xpath criteria: //XCUIElementTypeButton[@name="Login"]</msg>
+<msg time="2025-08-10T20:35:16.626414" level="INFO">Clicking element '//XCUIElementTypeButton[@name="Login"]'.</msg>
+<msg time="2025-08-10T20:35:16.626688" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'xpath', 'value': '//XCUIElementTypeButton[@name="Login"]'}</msg>
+<msg time="2025-08-10T20:35:16.627317" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:16.864207" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:16.864508" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"0D000000-0000-0000-D326-000000000000","ELEMENT":"0D000000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-dY28VjPESMKj+lsUkSJgcW3KixM"', 'Date': 'Sun, 10 Aug 2025 13:35:16 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:16.864686" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:16.865029" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0D000000-0000-0000-D326-000000000000/click {}</msg>
+<msg time="2025-08-10T20:35:16.865792" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:17.205816" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/0D000000-0000-0000-D326-000000000000/click HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:17.206070" level="DEBUG">Remote response: status=200 | data={"value":null,"sessionId":"3b4c29b1-e903-4683-8f5f-629ddcc17bb0"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '65', 'ETag': 'W/"41-J9FptXfGJQUIfehi5A4f7avTSto"', 'Date': 'Sun, 10 Aug 2025 13:35:17 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:17.206201" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:17.206410" level="INFO">xpath criteria: //XCUIElementTypeButton[@name="Login"]</msg>
 <arg>${login_btn}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2025-08-10T17:10:09.730418" elapsed="0.583817"/>
+<status status="PASS" start="2025-08-10T20:35:16.624164" elapsed="0.582334"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:10:09.729799" elapsed="0.584607"/>
+<status status="PASS" start="2025-08-10T20:35:16.623413" elapsed="0.583227"/>
 </kw>
-<kw name="User see welcoming text" owner="HomeScreen">
+<kw name="Admin see welcoming text" owner="HomeScreen">
 <kw name="Get Welcome Text Path" owner="HomeScreenLocators">
-<msg time="2025-08-10T17:10:10.315673" level="INFO">${xpath} = accessibility_id=Welcome, John Doe!</msg>
+<msg time="2025-08-10T20:35:17.207819" level="INFO">${xpath} = accessibility_id=Welcome, Administrator!</msg>
 <var>${xpath}</var>
-<arg>${user_displayName}</arg>
-<status status="PASS" start="2025-08-10T17:10:10.315404" elapsed="0.000306"/>
+<arg>${admin_displayName}</arg>
+<status status="PASS" start="2025-08-10T20:35:17.207525" elapsed="0.000338"/>
 </kw>
 <kw name="Get Text" owner="AppiumLibrary">
-<msg time="2025-08-10T17:10:10.316196" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'accessibility id', 'value': 'Welcome, John Doe!'}</msg>
-<msg time="2025-08-10T17:10:10.316703" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:10.408553" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:10.408766" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"2D010000-0000-0000-3F81-010000000000","ELEMENT":"2D010000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-TyeywnNKB+fyWHwypac4Wffgn6k"', 'Date': 'Sun, 10 Aug 2025 10:10:10 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:10.408876" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:10.409109" level="DEBUG">GET http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/2D010000-0000-0000-3F81-010000000000/text {}</msg>
-<msg time="2025-08-10T17:10:10.409548" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:10.445475" level="DEBUG">http://127.0.0.1:4723 "GET /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/2D010000-0000-0000-3F81-010000000000/text HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:10.445713" level="DEBUG">Remote response: status=200 | data={"value":"Welcome, John Doe!","sessionId":"3919c017-4539-4b3e-b693-ffee891ea5b4"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '81', 'ETag': 'W/"51-rBAujmUwuHTY77SNsl7jKyG1dQk"', 'Date': 'Sun, 10 Aug 2025 10:10:10 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:10.445847" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:10.449029" level="INFO">Element 'accessibility_id=Welcome, John Doe!' text is 'Welcome, John Doe!' </msg>
-<msg time="2025-08-10T17:10:10.449206" level="INFO">${actual_username} = Welcome, John Doe!</msg>
+<msg time="2025-08-10T20:35:17.208377" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'accessibility id', 'value': 'Welcome, Administrator!'}</msg>
+<msg time="2025-08-10T20:35:17.208792" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:17.296524" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:17.296822" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"2B010000-0000-0000-D326-000000000000","ELEMENT":"2B010000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-GV12SoFS2RptMi6wojegykn/pZU"', 'Date': 'Sun, 10 Aug 2025 13:35:17 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:17.296990" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:17.297324" level="DEBUG">GET http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/2B010000-0000-0000-D326-000000000000/text {}</msg>
+<msg time="2025-08-10T20:35:17.298062" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:17.332227" level="DEBUG">http://127.0.0.1:4723 "GET /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/2B010000-0000-0000-D326-000000000000/text HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:17.332512" level="DEBUG">Remote response: status=200 | data={"value":"Welcome, Administrator!","sessionId":"3b4c29b1-e903-4683-8f5f-629ddcc17bb0"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '86', 'ETag': 'W/"56-/fQMkUiYEeabnSmn4K76fKOA5D8"', 'Date': 'Sun, 10 Aug 2025 13:35:17 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:17.332675" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:17.335406" level="INFO">Element 'accessibility_id=Welcome, Administrator!' text is 'Welcome, Administrator!' </msg>
+<msg time="2025-08-10T20:35:17.335553" level="INFO">${actual_username} = Welcome, Administrator!</msg>
 <var>${actual_username}</var>
 <arg>${xpath}</arg>
 <doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
-<status status="PASS" start="2025-08-10T17:10:10.315857" elapsed="0.133383"/>
+<status status="PASS" start="2025-08-10T20:35:17.208035" elapsed="0.127551"/>
 </kw>
 <kw name="Element Should Contain Text" owner="AppiumLibrary">
-<msg time="2025-08-10T17:10:10.451503" level="INFO">Verifying element 'Welcome, John Doe!' contains text 'John Doe'.</msg>
-<msg time="2025-08-10T17:10:10.451757" level="DEBUG">POST http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements {'using': 'id', 'value': 'Welcome, John Doe!'}</msg>
-<msg time="2025-08-10T17:10:10.452306" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:10.519124" level="DEBUG">http://127.0.0.1:4723 "POST /session/3919c017-4539-4b3e-b693-ffee891ea5b4/elements HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:10.519427" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"2D010000-0000-0000-3F81-010000000000","ELEMENT":"2D010000-0000-0000-3F81-010000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-TyeywnNKB+fyWHwypac4Wffgn6k"', 'Date': 'Sun, 10 Aug 2025 10:10:10 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:10.519601" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:10.519947" level="DEBUG">GET http://127.0.0.1:4723/session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/2D010000-0000-0000-3F81-010000000000/text {}</msg>
-<msg time="2025-08-10T17:10:10.520665" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
-<msg time="2025-08-10T17:10:10.555570" level="DEBUG">http://127.0.0.1:4723 "GET /session/3919c017-4539-4b3e-b693-ffee891ea5b4/element/2D010000-0000-0000-3F81-010000000000/text HTTP/1.1" 200 0</msg>
-<msg time="2025-08-10T17:10:10.555850" level="DEBUG">Remote response: status=200 | data={"value":"Welcome, John Doe!","sessionId":"3919c017-4539-4b3e-b693-ffee891ea5b4"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '81', 'ETag': 'W/"51-rBAujmUwuHTY77SNsl7jKyG1dQk"', 'Date': 'Sun, 10 Aug 2025 10:10:10 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
-<msg time="2025-08-10T17:10:10.555968" level="DEBUG">Finished Request</msg>
-<msg time="2025-08-10T17:10:10.556130" level="INFO">criteria is Welcome, John Doe!</msg>
+<msg time="2025-08-10T20:35:17.337905" level="INFO">Verifying element 'Welcome, Administrator!' contains text 'Administrator'.</msg>
+<msg time="2025-08-10T20:35:17.338072" level="DEBUG">POST http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements {'using': 'id', 'value': 'Welcome, Administrator!'}</msg>
+<msg time="2025-08-10T20:35:17.338476" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:17.405054" level="DEBUG">http://127.0.0.1:4723 "POST /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/elements HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:17.405351" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"2B010000-0000-0000-D326-000000000000","ELEMENT":"2B010000-0000-0000-D326-000000000000"}]} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '139', 'ETag': 'W/"8b-GV12SoFS2RptMi6wojegykn/pZU"', 'Date': 'Sun, 10 Aug 2025 13:35:17 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:17.405527" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:17.405869" level="DEBUG">GET http://127.0.0.1:4723/session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/2B010000-0000-0000-D326-000000000000/text {}</msg>
+<msg time="2025-08-10T20:35:17.406637" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-08-10T20:35:17.439683" level="DEBUG">http://127.0.0.1:4723 "GET /session/3b4c29b1-e903-4683-8f5f-629ddcc17bb0/element/2B010000-0000-0000-D326-000000000000/text HTTP/1.1" 200 0</msg>
+<msg time="2025-08-10T20:35:17.439973" level="DEBUG">Remote response: status=200 | data={"value":"Welcome, Administrator!","sessionId":"3b4c29b1-e903-4683-8f5f-629ddcc17bb0"} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '86', 'ETag': 'W/"56-/fQMkUiYEeabnSmn4K76fKOA5D8"', 'Date': 'Sun, 10 Aug 2025 13:35:17 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-08-10T20:35:17.440133" level="DEBUG">Finished Request</msg>
+<msg time="2025-08-10T20:35:17.440381" level="INFO">criteria is Welcome, Administrator!</msg>
 <arg>${actual_username}</arg>
-<arg>${user_displayName}</arg>
+<arg>${admin_displayName}</arg>
 <doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-10T17:10:10.449458" elapsed="0.106730"/>
+<status status="PASS" start="2025-08-10T20:35:17.335805" elapsed="0.104682"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:10:10.314862" elapsed="0.241426"/>
+<status status="PASS" start="2025-08-10T20:35:17.207044" elapsed="0.233619"/>
 </kw>
-<status status="PASS" start="2025-08-10T17:10:07.399992" elapsed="3.156502"/>
+<status status="PASS" start="2025-08-10T20:35:14.294875" elapsed="3.146121"/>
 </test>
-<status status="PASS" start="2025-08-10T17:09:43.443453" elapsed="27.113696"/>
+<status status="PASS" start="2025-08-10T20:34:50.296505" elapsed="27.145374"/>
 </suite>
-<status status="PASS" start="2025-08-10T17:09:43.443060" elapsed="27.115677"/>
-</suite>
-<status status="PASS" start="2025-08-10T17:09:43.434744" elapsed="27.124612"/>
+<status status="PASS" start="2025-08-10T20:34:50.288132" elapsed="27.154544"/>
 </suite>
 <statistics>
 <total>
@@ -836,9 +833,8 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 <tag>
 </tag>
 <suite>
-<stat name="Ios" id="s1" pass="4" fail="0" skip="0">Ios</stat>
-<stat name="User" id="s1-s1" pass="4" fail="0" skip="0">Ios.User</stat>
-<stat name="01 User Login" id="s1-s1-s1" pass="4" fail="0" skip="0">Ios.User.01 User Login</stat>
+<stat name="Admin" id="s1" pass="4" fail="0" skip="0">Admin</stat>
+<stat name="01 Admin Login" id="s1-s1" pass="4" fail="0" skip="0">Admin.01 Admin Login</stat>
 </suite>
 </statistics>
 <errors>

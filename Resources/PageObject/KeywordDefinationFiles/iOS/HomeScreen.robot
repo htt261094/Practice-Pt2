@@ -23,3 +23,8 @@ User see welcoming text
     ${xpath}=    Get Welcome Text Path    ${user_displayName}
     ${actual_username}=    Get Text    ${xpath}
     Element Should Contain Text    ${actual_username}    ${user_displayName}
+
+Admin see welcoming text
+    ${xpath}=    Get Welcome Text Path    ${admin_displayName}
+    ${actual_username}=    Get Text    ${xpath}
+    Element Should Contain Text    ${actual_username}    ${admin_displayName}
