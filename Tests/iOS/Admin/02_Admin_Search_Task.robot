@@ -7,27 +7,25 @@ Resource    ../../../Resources/PageObject/KeywordDefinationFiles/iOS/LoginScreen
 
 *** Test Cases ***
 Admin filter category only
+    Admin tap on filter button
     User tap to show filter
     User select Customer Service category
     Customer Category Category displayed on screen
+    Admin clear all filter
 
 Admin filter only priority
     User select All category
     User select High priority
     High Priority displayed on screen
+    Admin clear all filter
 
 Admin filter with both category and priority
     User select Data Entry category
     User select Medium priority
     Data Entry Category displayed on screen
     Medium Priority displayed on screen
+    Admin clear all filter
 
 Admin search for Report task
-    Open iOS simulator
-    Load Admin Credentials to login
-    Admin input username
-    Admin input password
-    User click login button
-    Admin tap on filter button
     Admin search for report task
     Reporting Category displayed on screen

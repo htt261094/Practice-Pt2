@@ -68,3 +68,9 @@ Low Priority displayed on screen
 
 Admin search for report task
     Input Text    ${searchbox}    Report
+
+Admin clear all filter
+    Click Element    ${clear_filter_btn}
+
+Admin tap back button
+    Click Element    ${back_btn}

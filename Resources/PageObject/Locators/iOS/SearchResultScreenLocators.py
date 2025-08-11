@@ -3,6 +3,7 @@ searchbox = "//XCUIElementTypeTextField[@value=\"Search tasks...\"]"
 filter_option = "//XCUIElementTypeStaticText[@name=\"Show Filters\"]"
 clear_filter_btn = "accessibility_id=Clear All Filters"
 hide_filter_btn = "//XCUIElementTypeStaticText[@name=\"Hide Filters\"]"
+back_btn = "accessibility_id=Home"
 
 #category
 cat_all_option = "accessibility_id=All"
